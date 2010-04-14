@@ -12,6 +12,38 @@ alias gba='git branch -a'
 alias gd='git diff | mate'
 alias gull='git pull'
 alias gush='git push'
+# Commith with message
+function gg() {
+    git commit -a -v -m "$*"
+}
 
 # Horizontal line in shell 
 alias hr='printf "%`tput cols`s"|tr " " "#"'
+
+# List
+alias ls='ls -G'
+alias lsa='ls -lha'
+
+# Delete
+alias rmd='rmdir'
+
+# Open Finder
+alias fn='open . &'
+
+
+################
+## Navigation ##
+################
+alias cdb='cd -'
+alias ..='cd ..'
+# Project folders #
+alias cdtrm='cd /Users/akudryashov/Documents/workspace/terminal'
+alias cdaac='cd /Users/akudryashov/Documents/workspace/aboutacar'
+alias cdasm='cd /Users/akudryashov/Documents/workspace/asiamotors'
+alias cdstk='cd /Users/akudryashov/Documents/workspace/suntask'
+alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer'
+# Make and go
+function take() {
+    mkdir $1
+    cd $1
+}

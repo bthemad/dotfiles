@@ -33,13 +33,3 @@ export PHP_COMMAND=/Applications/MAMP/bin/php5/bin/php
 export PHING_HOME=/Applications/MAMP/phing
 export PHP_CLASSPATH=${PHING_HOME}/classes
 export PATH=${PATH}:${PHING_HOME}/bin
-
-
-####################
-## Path shortcuts ##
-####################
-export trm=/Users/akudryashov/Documents/workspace/terminal
-export aac=/Users/akudryashov/Documents/workspace/aboutacar
-export asm=/Users/akudryashov/Documents/workspace/asiamotors
-export stk=/Users/akudryashov/Documents/workspace/suntask
-export pnt=/Users/akudryashov/Documents/workspace/pointer

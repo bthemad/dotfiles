@@ -4,7 +4,7 @@
 
 # Git settings and autocompletion
 export GIT_PS1_SHOWDIRTYSTATE=1
-source ~.dotfiles/bash/scripts/git_completion
+source ~/.dotfiles/bash/scripts/git_completion
 
 # SSH Auto Completion of Remote Hosts
 complete -W "$(echo `cat ~/.ssh/config | grep '^Host ' | colrm 1 5`)" ssh
