@@ -1,0 +1,24 @@
+####################
+## Autocompletion ##
+####################
+
+# Git settings and autocompletion
+export GIT_PS1_SHOWDIRTYSTATE=1
+source ~.dotfiles/bash/scripts/git_completion
+
+# SSH Auto Completion of Remote Hosts
+complete -W "$(echo `cat ~/.ssh/config | grep '^Host ' | colrm 1 5`)" ssh
+
+
+############
+## Prompt ##
+############
+export PS1='\h:\W$(__git_ps1 "(%s)")$ '
+
+
+#############
+## History ##
+#############
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
