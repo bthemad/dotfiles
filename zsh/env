@@ -1,3 +1,9 @@
+####################
+### Path options ###
+####################
+typeset -U path                 # Keep unique paths
+
+
 ############
 ## Locale ##
 ############
@@ -20,6 +26,7 @@ fi
 ## Path ##
 ##########
 # path to web binaries
+# path=(~/bin $path)
 export PATH=/Applications/MAMP/Library/bin/:/Applications/MAMP/bin/php5/bin:~/bin/:$PATH
 # path to kdiff3
 export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS/:$PATH

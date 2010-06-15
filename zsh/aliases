@@ -1,6 +1,8 @@
-#############
-## Aliases ##
-#############
+############################
+### zsh specific aliases ###
+############################
+alias mkdir='nocorrect mkdir'
+
 
 # Git aliases
 alias gst='git status'
@@ -38,6 +40,7 @@ alias lsa='ls -lha'
 
 # Open Finder
 alias fn='open . &'
+
 
 ################
 ## Navigation ##

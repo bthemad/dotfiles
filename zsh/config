@@ -1,0 +1,40 @@
+####################
+## Autocompletion ##
+####################
+
+
+
+############
+## Prompt ##
+############
+PS1='%1~$ '
+
+
+#############
+## History ##
+#############
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt APPEND_HISTORY               # Don't rewrite, append
+setopt INC_APPEND_HISTORY           # Append just after execution
+setopt SHARE_HISTORY                # Share history immediately between sessions
+setopt HIST_IGNORE_DUPS             # Don't save dups
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS           # Tidy line before save
+setopt NO_HIST_BEEP                 # Don't like chatty shells
+
+################
+## Navigation ##
+################
+setopt AUTO_PUSHD                   # Automatically add dirs to stack
+setopt PUSHD_IGNORE_DUPS            # Don't include duplicates in stack
+export DIRSTACKSIZE=15
+
+##########
+## Misc ##
+##########
+setopt NO_BEEP                      # Silence is beautiful
+setopt AUTO_CD                      # Change directory just by it's name
+setopt CD_ABLE_VARS                 # Inject a variable if no such directory
+setopt CORRECT                      #

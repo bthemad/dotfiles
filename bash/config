@@ -1,6 +1,8 @@
 ####################
 ## Autocompletion ##
 ####################
+# Bash autocompletion
+source ~/.dotfiles/bash/scripts/bash_completion
 
 # Git settings and autocompletion
 export GIT_PS1_SHOWDIRTYSTATE=1
