@@ -1,13 +1,17 @@
-. ~/.dotfiles/bash/env
-. ~/.dotfiles/bash/config
-. ~/.dotfiles/bash/aliases
+droot=~/.dotfiles/bash
+
+. ${droot}/env
+. ${droot}/config
+. ${droot}/aliases
 
 # Load platform-specific shortcuts
-platform=`uname`
-if [ ${platform} = "Darwin" ]; then
-    . ~/.dotfiles/bash/mac
+platform=`uname | awk '{print tolower($0)}'`
+if [ -f ${droot}/platform/${platform} ]; then
+    . ${droot}/platform/${platform}
 fi
 
-if [ ${platform} = "Linux" ]; then
-    . ~/.dotfiles/bash/linux
+# Load machine-specific files, if presented
+hostname=`hostname -s`
+if [ -f ${droot}/hostname/${hostname} ]; then
+    . ${droot}/hostname/${hostname}
 fi

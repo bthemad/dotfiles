@@ -1,0 +1,6 @@
+###############
+### Aliases ###
+###############
+
+# Build folders #
+alias cdstb='cd /var/www/builder.wrk/suntask.qbero.ru/'

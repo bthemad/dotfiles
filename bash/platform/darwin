@@ -1,0 +1,6 @@
+###############
+### Aliases ###
+###############
+
+alias ls='ls -F -G'
+alias fn='open . &'

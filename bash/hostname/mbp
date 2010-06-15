@@ -1,0 +1,10 @@
+###############
+### Aliases ###
+###############
+
+# Project folders #
+alias cdtrm='cd /Users/akudryashov/Documents/workspace/terminal'
+alias cdaac='cd /Users/akudryashov/Documents/workspace/aboutacar'
+alias cdasm='cd /Users/akudryashov/Documents/workspace/asiamotors'
+alias cdstk='cd /Users/akudryashov/Documents/workspace/suntask'
+alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer'
