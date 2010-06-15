@@ -1,6 +1,6 @@
 droot=~/.dotfiles/bash
 
-. ${droot}/env
+# Load common files
 . ${droot}/config
 . ${droot}/aliases
 

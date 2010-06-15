@@ -4,3 +4,9 @@
 
 alias ls='ls -F -G'
 alias fn='open . &'
+
+
+###################
+### Environment ###
+###################
+export EDITOR='mate -w'

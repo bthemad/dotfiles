@@ -8,3 +8,30 @@ alias cdaac='cd /Users/akudryashov/Documents/workspace/aboutacar'
 alias cdasm='cd /Users/akudryashov/Documents/workspace/asiamotors'
 alias cdstk='cd /Users/akudryashov/Documents/workspace/suntask'
 alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer'
+
+
+###################
+### Environment ###
+###################
+# Locale for iTerm
+export LANG=ru_RU.UTF-8
+
+##########
+## Path ##
+##########
+# path to web binaries
+export PATH=/Applications/MAMP/Library/bin/:/Applications/MAMP/bin/php5/bin:~/bin/:$PATH
+# path to kdiff3
+export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS/:$PATH
+# path to MacVim
+export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
+# Path to scheme
+export PATH=/Applications/mzscheme/bin:$PATH
+# Path to sbin
+export PATH=/usr/local/sbin:$PATH
+
+# Phing settings
+export PHP_COMMAND=/Applications/MAMP/bin/php5/bin/php
+export PHING_HOME=/Applications/MAMP/phing
+export PHP_CLASSPATH=${PHING_HOME}/classes
+export PATH=${PATH}:${PHING_HOME}/bin
