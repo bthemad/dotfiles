@@ -1,2 +1,3 @@
 Dotfiles for bash and zsh shells.
 Bash is quite stable and will be tuned through the time incrementally, while zsh's ones will be edited dramatically.
+The main idea of config files is to separate linux properties from mac ones and give an ability to implement different environment files for different hosts.
