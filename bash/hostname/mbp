@@ -3,12 +3,41 @@
 ###############
 
 # Project folders #
+alias cdwrk='cd /Users/akudryashov/Documents/workspace'
 alias cdtrm='cd /Users/akudryashov/Documents/workspace/terminal'
 alias cdaac='cd /Users/akudryashov/Documents/workspace/aboutacar'
 alias cdasm='cd /Users/akudryashov/Documents/workspace/asiamotors'
 alias cdstk='cd /Users/akudryashov/Documents/workspace/suntask'
-alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer'
+alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer/web'
 
+# Show My Tasks #
+alias st='icalBuddy uncompletedTasks'
+
+# Google Docs Edit #
+alias gde='google docs edit --editor vim --title'
+alias gdg='google docs get --title'
+alias gdl='google docs list name'
+alias gdlf='google docs list name --folder'
+alias gdu='google docs upload'
+
+# ServerStack Stuff #
+# Nginx
+alias ngstart='sudo /usr/local/sbin/nginx'
+alias ngstop='sudo /usr/local/sbin/nginx -s stop'
+alias ngres='sudo /usr/local/sbin/nginx -s reload'
+alias ngcd='cd /usr/local/Cellar/nginx/0.7.67/conf/'
+# Mysql
+alias mystart='/usr/local/share/mysql/mysql.server start'
+alias mystop='/usr/local/share/mysql/mysql.server stop'
+alias myres='/usr/local/share/mysql/mysql.server restart'
+# PHP-FPM
+alias fpstart='sudo /usr/local/bin/php-fpm start'
+alias fpstop='sudo /usr/local/bin/php-fpm stop'
+alias fpres='sudo /usr/local/bin/php-fpm restart'
+# PHP-Stack
+alias phpstart='sudo /usr/local/sbin/nginx && /usr/local/share/mysql/mysql.server start && sudo /usr/local/bin/php-fpm start'
+alias phpstop='sudo /usr/local/sbin/nginx -s stop && /usr/local/share/mysql/mysql.server stop && sudo /usr/local/bin/php-fpm stop'
+alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/share/mysql/mysql.server restart && sudo /usr/local/bin/php-fpm restart'
 
 ###################
 ### Environment ###
@@ -19,8 +48,6 @@ export LANG=ru_RU.UTF-8
 ##########
 ## Path ##
 ##########
-# path to web binaries
-export PATH=/Applications/MAMP/Library/bin/:/Applications/MAMP/bin/php5/bin:~/bin/:$PATH
 # path to kdiff3
 export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS/:$PATH
 # path to MacVim
@@ -29,9 +56,5 @@ export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
 export PATH=/Applications/mzscheme/bin:$PATH
 # Path to sbin
 export PATH=/usr/local/sbin:$PATH
-
-# Phing settings
-export PHP_COMMAND=/Applications/MAMP/bin/php5/bin/php
-export PHING_HOME=/Applications/MAMP/phing
-export PHP_CLASSPATH=${PHING_HOME}/classes
-export PATH=${PATH}:${PHING_HOME}/bin
+# Path to bin
+export PATH=/usr/local/bin:$PATH

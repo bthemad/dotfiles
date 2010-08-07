@@ -2,7 +2,8 @@
 ### zsh specific aliases ###
 ############################
 alias mkdir='nocorrect mkdir'
-
+alias :q=exit
+alias f='find -name'
 
 # Git aliases
 alias gst='git status'
