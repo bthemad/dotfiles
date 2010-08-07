@@ -8,10 +8,17 @@ alias cdtrm='cd /Users/akudryashov/Documents/workspace/terminal'
 alias cdaac='cd /Users/akudryashov/Documents/workspace/aboutacar'
 alias cdasm='cd /Users/akudryashov/Documents/workspace/asiamotors'
 alias cdstk='cd /Users/akudryashov/Documents/workspace/suntask'
-alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer'
+alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer/web'
 
 # Show My Tasks #
 alias st='icalBuddy uncompletedTasks'
+
+# Google Docs Edit #
+alias gde='google docs edit --editor vim --title'
+alias gdg='google docs get --title'
+alias gdl='google docs list name'
+alias gdlf='google docs list name --folder'
+alias gdu='google docs upload'
 
 # ServerStack Stuff #
 # Nginx
