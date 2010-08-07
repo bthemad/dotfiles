@@ -6,6 +6,13 @@ alias ls='ls -F -G'
 alias fn='open . &'
 
 
+##############
+### Config ###
+##############
+# Bash autocompletion
+source ~/.dotfiles/bash/scripts/bash_completion
+
+
 ###################
 ### Environment ###
 ###################
