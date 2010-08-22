@@ -26,6 +26,9 @@ alias hr='printf "%`tput cols`s"|tr " " "#"'
 
 alias lsa='ls -lha'
 
+# Some customized irb shell
+alias irb='irb --prompt simple --readline -r irb/completion'
+
 ################
 ## Navigation ##
 ################
