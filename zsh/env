@@ -1,7 +1,6 @@
 ####################
 ### Path options ###
 ####################
-typeset -U path                 # Keep unique paths
 
 
 ############
@@ -21,24 +20,32 @@ else
     export EDITOR='vim'
 fi
 
+# Open plain files with vim
+for s in txt c cpp php js py rb; do
+    alias -s $s='vim'
+done
+
+# Open strange files with open command on OS X
+if [[ $OSTYPE[1,6] == "darwin" ]]; then
+    for s in mp3 wav aac m4a \
+        avi mp4 m4v mov qt mpg mpeg mkv \
+        jpg png psd bmp gif tif tiff \
+        ps pdf html dmg; do
+        alias -s $s=open
+    done
+fi
 
 ##########
 ## Path ##
 ##########
-# path to web binaries
-# path=(~/bin $path)
-export PATH=/Applications/MAMP/Library/bin/:/Applications/MAMP/bin/php5/bin:~/bin/:$PATH
 # path to kdiff3
-export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS/:$PATH
-# path to MacVim
-export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
+path=(/Applications/Utilities/kdiff3.app/Contents/MacOS $path)
 # Path to scheme
-export PATH=/Applications/mzscheme/bin:$PATH
+path=(/Applications/mzscheme/bin $path)
+# Path to bin
+path=(/usr/local/bin $path)
 # Path to sbin
-export PATH=/usr/local/sbin:$PATH
+path=(/usr/local/sbin $path)
+# path to MacVim
+path=(/Applications/MacVim.app/Contents/MacOS $path)
 
-# Phing settings
-export PHP_COMMAND=/Applications/MAMP/bin/php5/bin/php
-export PHING_HOME=/Applications/MAMP/phing
-export PHP_CLASSPATH=${PHING_HOME}/classes
-export PATH=${PATH}:${PHING_HOME}/bin

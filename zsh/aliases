@@ -1,9 +1,9 @@
 ############################
 ### zsh specific aliases ###
 ############################
-alias mkdir='nocorrect mkdir'
 alias :q=exit
 alias f='find -name'
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # Git aliases
 alias gst='git status'
@@ -19,6 +19,7 @@ alias gba='git branch -a'
 alias gd='git diff | mate'
 alias gull='git pull'
 alias gush='git push'
+
 # Commith with message
 function gg() {
     git commit -a -v -m "$*"
@@ -38,9 +39,21 @@ else
     fi
 fi
 alias lsa='ls -lha'
+alias lodd='ls -d -- .*(/)'                 # only show dot-dirs
+alias lodf='ls -a -- .*(.)'                 # only show dot-files
+alias lod='ls -d -- *(/)'                   # only show dirs
+alias loe='ls -ld -- *(/^F)'                # only show empty dirs
+alias lsnew='=ls -rtlh -- *(.) | tail $@ 2&>/dev/null'  # only the newest files
+alias lsold="=ls -rtl -- *(.) | head $@ 2&>/dev/null"   # display the oldest files
+alias lssmall="=ls -Sl -- *(.) | tail $@ 2&>/dev/null"  # display the smallest files
+alias lsx='ls -l -- *(*) | head $@ 2&>/dev/null'        # only show executables
+alias lsbig="ls -lSh -- *(.) | grep -v total | head $@ 2&>/dev/null"    # display the biggest files
 
 # Open Finder
 alias fn='open . &'
+
+# Ruby console
+alias irb='irb --prompt simple --readline -r irb/completion'
 
 
 ################
@@ -48,17 +61,25 @@ alias fn='open . &'
 ################
 alias cdb='cd -'
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....="cd ../../.."
+
 # Project folders #
 alias cdtrm='cd /Users/akudryashov/Documents/workspace/terminal'
 alias cdaac='cd /Users/akudryashov/Documents/workspace/aboutacar'
 alias cdasm='cd /Users/akudryashov/Documents/workspace/asiamotors'
 alias cdstk='cd /Users/akudryashov/Documents/workspace/suntask'
 alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer'
+
 # Make and go
 function take() {
     mkdir $1
     cd $1
 }
+
+# Push and Pop made simple
+alias fd=pushd
+alias sd=popd
 
 ###############
 ## Functions ##
@@ -82,3 +103,13 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
+
+# Search through history
+h () { history 0 | grep $1 }
+
+# Open man pages with Preview
+if [[ $OSTYPE[1,6] == "darwin" ]]; then
+    function manp () {
+        man -t $* | ps2pdf - - | open -f -a Preview
+    }
+fi

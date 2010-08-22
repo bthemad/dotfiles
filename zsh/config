@@ -1,35 +1,52 @@
+##################
+## Load modules ##
+##################
+autoload -U compinit promptinit colors vcs_info
+colors
+compinit
+promptinit
+vcs_info
+
 ####################
 ## Autocompletion ##
 ####################
-autoload -U compinit promptinit
-compinit
-promptinit;
+setopt EXTENDED_GLOB                # Extended globbing with ^ etc.
+setopt GLOB_DOTS                    # Leading dots not required for globbing
+setopt CDABLE_VARS                  # Expand arguments for cd, like they are with ~
+fignore=(DS_Store $fignore)         # Ignore DS_Store during completion
 
 ############
 ## Prompt ##
 ############
-PS1='%1~$ '
+# External script for git prompt
+source ~/.dotfiles/zsh/scripts/zsh_git_prompt.sh
+PS1='%1~$(prompt_git_info) $ '
 
 
 #############
 ## History ##
 #############
 export HISTFILE=~/.zsh_history
-export HISTSIZE=10000
+export HISTSIZE=10500
 export SAVEHIST=10000
 setopt APPEND_HISTORY               # Don't rewrite, append
 setopt INC_APPEND_HISTORY           # Append just after execution
 setopt SHARE_HISTORY                # Share history immediately between sessions
 setopt HIST_IGNORE_DUPS             # Don't save dups
 setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS            # Replace old entries with new ones
 setopt HIST_REDUCE_BLANKS           # Tidy line before save
 setopt NO_HIST_BEEP                 # Don't like chatty shells
+setopt HIST_NO_STORE                # Don't store history calls
+setopt HIST_VERIFY                  # Don't execute, just expand
 
 ################
 ## Navigation ##
 ################
 setopt AUTO_PUSHD                   # Automatically add dirs to stack
 setopt PUSHD_IGNORE_DUPS            # Don't include duplicates in stack
+setopt PUSHD_SILENT                 # Don't print stack after push and pop
+setopt PUSHD_TO_HOME                # Call to pushd without params leads to ~
 export DIRSTACKSIZE=15
 
 ##########
@@ -37,5 +54,6 @@ export DIRSTACKSIZE=15
 ##########
 setopt NO_BEEP                      # Silence is beautiful
 setopt AUTO_CD                      # Change directory just by it's name
-setopt CD_ABLE_VARS                 # Inject a variable if no such directory
-setopt CORRECT                      #
+setopt CORRECT                      # Correct misprints
+setopt CORRECT_ALL                  # Try to correct even arguments
+setopt NOCLOBBER                    # Prevent from accidentally overwriting a file
