@@ -6,7 +6,7 @@ alias f='find -name'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # Git aliases
-alias gst='git status'
+alias gst='git status --short'
 alias ga='git add'
 alias gaa='git add .'
 alias gc='git commit -v'
@@ -78,8 +78,9 @@ function take() {
 }
 
 # Push and Pop made simple
-alias fd=pushd
-alias sd=popd
+alias pu=pushd
+alias po=popd
+
 
 ###############
 ## Functions ##
@@ -113,3 +114,12 @@ if [[ $OSTYPE[1,6] == "darwin" ]]; then
         man -t $* | ps2pdf - - | open -f -a Preview
     }
 fi
+
+
+#########
+## ZLE ##
+#########
+# Run with sudo by ZLE
+run-with-sudo() { LBUFFER="sudo $LBUFFER" }
+zle -N run-with-sudo
+bindkey '^X^E' run-with-sudo

@@ -1,11 +1,13 @@
 ##################
 ## Load modules ##
 ##################
-autoload -U compinit promptinit colors vcs_info
+zmodload zsh/complist
+autoload -U compinit complist promptinit colors vcs_info
 colors
 compinit
 promptinit
 vcs_info
+
 
 ####################
 ## Autocompletion ##
@@ -14,13 +16,38 @@ setopt EXTENDED_GLOB                # Extended globbing with ^ etc.
 setopt GLOB_DOTS                    # Leading dots not required for globbing
 setopt CDABLE_VARS                  # Expand arguments for cd, like they are with ~
 fignore=(DS_Store $fignore)         # Ignore DS_Store during completion
+# Configuring the completion
+# Try complete, then do extended and substring, then do correction
+zstyle ':completion:*' completer _complete _complete:-extended _complete:-substring _correct 
+# Extended one. Do case-insensitive and _,+,- are special, so p_h => public_html
+zstyle ':completion:*:complete-extended:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[+._-]=*'
+# Do some substrings
+zstyle ':completion:*:complete-substring:*' matcher-list 'm:{a-z}={A-Z} l:|=**'
+
 
 ############
 ## Prompt ##
 ############
-# External script for git prompt
-source ~/.dotfiles/zsh/scripts/zsh_git_prompt.sh
-PS1='%1~$(prompt_git_info) $ '
+# Let's do git info natively
+DEFPROMPT='%~ $ '   # default prompt
+
+zstyle ':vcs_info:*' enable git hg svn                  # only git, hg and svn
+zstyle ':vcs_info:*:prompt:*' check-for-changes true    # can be slower
+zstyle ':vcs_info:*:prompt:*' unstagedstr "*"           # unstaged cause "*"
+zstyle ':vcs_info:*:prompt:*' stagedstr "+"             # staged cause "+"
+zstyle ':vcs_info:*:prompt:*' actionformats "(%b%c%u:%a)" # format for actions
+zstyle ':vcs_info:*:prompt:*' formats "(%b%c%u)"        # default format
+zstyle ':vcs_info:*:prompt:*' nvcsformats "no"          # Set answer to "no" if we're not in repo
+
+function precmd() {
+    vcs_info 'prompt'
+    if [[ $vcs_info_msg_0_ != "no" ]];
+    then
+        PROMPT="%~${vcs_info_msg_0_} $ "
+    else
+        PROMPT=$DEFPROMPT
+    fi
+}
 
 
 #############
@@ -40,6 +67,7 @@ setopt NO_HIST_BEEP                 # Don't like chatty shells
 setopt HIST_NO_STORE                # Don't store history calls
 setopt HIST_VERIFY                  # Don't execute, just expand
 
+
 ################
 ## Navigation ##
 ################
@@ -49,6 +77,7 @@ setopt PUSHD_SILENT                 # Don't print stack after push and pop
 setopt PUSHD_TO_HOME                # Call to pushd without params leads to ~
 export DIRSTACKSIZE=15
 
+
 ##########
 ## Misc ##
 ##########
@@ -57,3 +86,4 @@ setopt AUTO_CD                      # Change directory just by it's name
 setopt CORRECT                      # Correct misprints
 setopt CORRECT_ALL                  # Try to correct even arguments
 setopt NOCLOBBER                    # Prevent from accidentally overwriting a file
+
