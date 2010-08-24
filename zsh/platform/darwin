@@ -1,31 +1,26 @@
+#!/usr/local/bin/zsh
 ###############
 ### Aliases ###
 ###############
 alias ls='ls -F -G'
-# Open Finder
-alias fn='open . &'
 # Use MacVim as vim
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 # Open man pages with Preview
-if [[ $OSTYPE[1,6] == "darwin" ]]; then
-    function manp () {
-        man -t $* | ps2pdf - - | open -f -a Preview
-    }
-fi
+function manp () {
+    man -t $* | ps2pdf - - | open -f -a Preview
+}
 
 
 ##############
 ### Config ###
 ##############
 # Open strange files with open command on OS X
-if [[ $OSTYPE[1,6] == "darwin" ]]; then
-    for s in mp3 wav aac m4a \
-        avi mp4 m4v mov qt mpg mpeg mkv \
-        jpg png psd bmp gif tif tiff \
-        ps pdf html dmg; do
-        alias -s $s=open
-    done
-fi
+for s in mp3 wav aac m4a \
+    avi mp4 m4v mov qt mpg mpeg mkv \
+    jpg png psd bmp gif tif tiff \
+    ps pdf html dmg; do
+    alias -s $s=open
+done
 
 ###################
 ### Environment ###

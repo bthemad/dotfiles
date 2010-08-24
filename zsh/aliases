@@ -1,8 +1,11 @@
+#!/usr/local/bin/zsh
 ############################
 ### zsh specific aliases ###
 ############################
 alias :q=exit
-alias f='find -name'
+function fn() {
+    find ./ -name $1
+}
 
 # Git aliases
 alias gst='git status --short'
@@ -28,15 +31,6 @@ function gg() {
 alias hr='printf "%`tput cols`s"|tr " " "#"'
 
 # List
-# We are on linux
-if ls -F --color=auto >&/dev/null ; then
-    alias ls='ls -F --color=auto'
-# We are on BSD or Mac
-else
-    if ls -F -G >&/dev/null ; then
-            alias ls='ls -F -G'
-    fi
-fi
 alias lsa='ls -lha'
 alias lodd='ls -d -- .*(/)'                 # only show dot-dirs
 alias lodf='ls -a -- .*(.)'                 # only show dot-files
@@ -47,6 +41,17 @@ alias lsold="=ls -rtl -- *(.) | head $@ 2&>/dev/null"   # display the oldest fil
 alias lssmall="=ls -Sl -- *(.) | tail $@ 2&>/dev/null"  # display the smallest files
 alias lsx='ls -l -- *(*) | head $@ 2&>/dev/null'        # only show executables
 alias lsbig="ls -lSh -- *(.) | grep -v total | head $@ 2&>/dev/null"    # display the biggest files
+
+# Stack walking
+alias 1='cd -'
+alias 2='cd +2'
+alias 3='cd +3'
+alias 4='cd +4'
+alias 5='cd +5'
+alias 6='cd +6'
+alias 7='cd +7'
+alias 8='cd +8'
+alias 9='cd +9'
 
 # Ruby console
 alias irb='irb --prompt simple --readline -r irb/completion'
@@ -66,7 +71,11 @@ function take() {
     cd $1
 }
 
+alias md='mkdir -p'
+alias rd=rmdir
+
 # Push and Pop made simple
+alias d='dirs -v'
 alias pu=pushd
 alias po=popd
 
