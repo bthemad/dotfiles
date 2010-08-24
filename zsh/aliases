@@ -3,7 +3,6 @@
 ############################
 alias :q=exit
 alias f='find -name'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # Git aliases
 alias gst='git status --short'
@@ -49,9 +48,6 @@ alias lssmall="=ls -Sl -- *(.) | tail $@ 2&>/dev/null"  # display the smallest f
 alias lsx='ls -l -- *(*) | head $@ 2&>/dev/null'        # only show executables
 alias lsbig="ls -lSh -- *(.) | grep -v total | head $@ 2&>/dev/null"    # display the biggest files
 
-# Open Finder
-alias fn='open . &'
-
 # Ruby console
 alias irb='irb --prompt simple --readline -r irb/completion'
 
@@ -63,13 +59,6 @@ alias cdb='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....="cd ../../.."
-
-# Project folders #
-alias cdtrm='cd /Users/akudryashov/Documents/workspace/terminal'
-alias cdaac='cd /Users/akudryashov/Documents/workspace/aboutacar'
-alias cdasm='cd /Users/akudryashov/Documents/workspace/asiamotors'
-alias cdstk='cd /Users/akudryashov/Documents/workspace/suntask'
-alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer'
 
 # Make and go
 function take() {
@@ -108,13 +97,6 @@ extract () {
 # Search through history
 h () { history 0 | grep $1 }
 
-# Open man pages with Preview
-if [[ $OSTYPE[1,6] == "darwin" ]]; then
-    function manp () {
-        man -t $* | ps2pdf - - | open -f -a Preview
-    }
-fi
-
 
 #########
 ## ZLE ##
@@ -123,3 +105,4 @@ fi
 run-with-sudo() { LBUFFER="sudo $LBUFFER" }
 zle -N run-with-sudo
 bindkey '^X^E' run-with-sudo
+

@@ -1,6 +1,17 @@
 ###############
 ### Aliases ###
 ###############
+alias ls='ls -F -G'
+# Open Finder
+alias fn='open . &'
+# Use MacVim as vim
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+# Open man pages with Preview
+if [[ $OSTYPE[1,6] == "darwin" ]]; then
+    function manp () {
+        man -t $* | ps2pdf - - | open -f -a Preview
+    }
+fi
 
 
 ##############
