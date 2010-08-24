@@ -87,3 +87,7 @@ setopt CORRECT                      # Correct misprints
 setopt CORRECT_ALL                  # Try to correct even arguments
 setopt NOCLOBBER                    # Prevent from accidentally overwriting a file
 
+# Open plain files with vim
+for s in txt c cpp php js py rb; do
+    alias -s $s='vim'
+done

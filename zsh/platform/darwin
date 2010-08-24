@@ -1,0 +1,21 @@
+###############
+### Aliases ###
+###############
+
+
+##############
+### Config ###
+##############
+# Open strange files with open command on OS X
+if [[ $OSTYPE[1,6] == "darwin" ]]; then
+    for s in mp3 wav aac m4a \
+        avi mp4 m4v mov qt mpg mpeg mkv \
+        jpg png psd bmp gif tif tiff \
+        ps pdf html dmg; do
+        alias -s $s=open
+    done
+fi
+
+###################
+### Environment ###
+###################

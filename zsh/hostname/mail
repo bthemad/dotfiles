@@ -1,0 +1,12 @@
+###############
+### Aliases ###
+###############
+
+# Build folders #
+alias cdstk='cd /var/www/builder.wrk/suntask.qbero.ru/'
+alias cdpnt='cd /var/www/builder.wrk/pointer.qbero.ru/'
+
+
+###################
+### Environment ###
+###################
