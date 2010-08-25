@@ -50,7 +50,7 @@ zstyle ':completion:*' menu select=0
 ## Prompt ##
 ############
 # Let's do git info natively
-DEFPROMPT='%~ $ '   # default prompt
+DEFPROMPT='%m:%~ $ '   # default prompt
 
 zstyle ':vcs_info:*' enable git hg svn                  # only git, hg and svn
 zstyle ':vcs_info:*:prompt:*' check-for-changes true    # can be slower
@@ -105,7 +105,7 @@ export DIRSTACKSIZE=15
 setopt NO_BEEP                      # Silence is beautiful
 setopt AUTO_CD                      # Change directory just by it's name
 setopt CORRECT                      # Correct misprints
-setopt CORRECT_ALL                  # Try to correct even arguments
+setopt NO_CORRECT_ALL                  # Try to correct even arguments
 setopt NOCLOBBER                    # Prevent from accidentally overwriting a file
 
 # Open plain files with vim
