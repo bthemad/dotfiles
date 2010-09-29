@@ -10,3 +10,4 @@ alias cdpnt='cd /var/www/builder.wrk/pointer.qbero.ru/'
 ###################
 ### Environment ###
 ###################
+export PATH=/home/pepyaka/bin:$PATH
