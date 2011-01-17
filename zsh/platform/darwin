@@ -25,4 +25,3 @@ done
 ###################
 ### Environment ###
 ###################
-export EDITOR='vim'

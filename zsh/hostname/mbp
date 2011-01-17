@@ -1,9 +1,6 @@
 ###############
 ### Aliases ###
 ###############
-# MacVim #
-alias mvim='/Applications/MacVim.app/Contents/MacOS/MacVim'
-
 # Project folders #
 alias cdwrk='cd /Users/akudryashov/Documents/workspace'
 alias cdtrm='cd /Users/akudryashov/Documents/workspace/terminal'
@@ -47,14 +44,13 @@ alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/share/mysql/mys
 ###################
 # Locale for iTerm
 export LANG=ru_RU.UTF-8
+export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 ##########
 ## Path ##
 ##########
 # path to kdiff3
 export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS/:$PATH
-# path to MacVim
-export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
 # Path to scheme
 export PATH=/Applications/mzscheme/bin:$PATH
 # Path to sbin
