@@ -21,6 +21,7 @@ alias gba='git branch -a'
 alias gd='git diff | mate'
 alias gull='git pull'
 alias gush='git push'
+alias gt='git tag'
 
 # Commith with message
 function gg() {
