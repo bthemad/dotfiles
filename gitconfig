@@ -38,3 +38,7 @@
     kdo = !gitx --date-order
     kado = !gitx --all --date-order
     kasd = !gitx --all --simplify-by-decoration
+
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
