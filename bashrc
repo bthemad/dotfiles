@@ -6,6 +6,7 @@ droot=~/.dotfiles/bash
 
 # Load platform-specific shortcuts
 platform=`uname | awk '{print tolower($0)}'`
+export PLATFORM=${platform}
 if [ -f ${droot}/platform/${platform} ]; then
     . ${droot}/platform/${platform}
 fi
