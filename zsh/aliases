@@ -57,6 +57,7 @@ alias 9='cd +9'
 # Ruby console
 alias irb='irb --prompt simple --readline -r irb/completion'
 
+alias mscp='rsync --progress --partial --rsh="ssh" -4'
 
 ################
 ## Navigation ##
