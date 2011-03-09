@@ -44,16 +44,16 @@ alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/share/mysql/mys
 ###################
 # Locale for iTerm
 export LANG=ru_RU.UTF-8
-export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
+export EDITOR='cvim'
 
 ##########
 ## Path ##
 ##########
 # path to kdiff3
 export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS/:$PATH
-# Path to scheme
-export PATH=/Applications/mzscheme/bin:$PATH
 # Path to sbin
 export PATH=/usr/local/sbin:$PATH
 # Path to bin
 export PATH=/usr/local/bin:$PATH
+# Path to WordNet
+export PATH=/usr/local/WordNet-3.0/bin:$PATH
