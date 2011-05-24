@@ -1,15 +1,6 @@
 ###############
 ### Aliases ###
 ###############
-# Project folders #
-alias cdwrk='cd /Users/akudryashov/Documents/workspace'
-alias cdtrm='cd /Users/akudryashov/Documents/workspace/terminal'
-alias cdaac='cd /Users/akudryashov/Documents/workspace/aboutacar'
-alias cdasm='cd /Users/akudryashov/Documents/workspace/asiamotors'
-#alias cdstk='cd /Users/akudryashov/Documents/workspace/suntask'
-alias cdpnt='cd /Users/akudryashov/Documents/workspace/pointer/web'
-alias cdstd='cd /Users/akudryashov/Documents/study/'
-
 # Show My Tasks #
 alias st='icalBuddy uncompletedTasks'
 
@@ -39,6 +30,9 @@ alias phpstart='sudo /usr/local/sbin/nginx && /usr/local/share/mysql/mysql.serve
 alias phpstop='sudo /usr/local/sbin/nginx -s stop && /usr/local/share/mysql/mysql.server stop && sudo /usr/local/bin/php-fpm stop'
 alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/share/mysql/mysql.server restart && sudo /usr/local/bin/php-fpm restart'
 
+# VM server
+alias vmstart='nohup VBoxHeadless --startvm "srv32" --vrde=off &'
+
 ###################
 ### Environment ###
 ###################
@@ -55,8 +49,8 @@ export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS/:$PATH
 export PATH=/usr/local/sbin:$PATH
 # Path to bin
 export PATH=/usr/local/bin:$PATH
-# Path to WordNet
-export PATH=/usr/local/WordNet-3.0/bin:$PATH
+# Path to my bin
+export PATH=/Users/akudryashov/bin:$PATH
 
 #############
 ## Plugins ##
