@@ -4,6 +4,7 @@
 ##################
 # Add additional completions dir to path
 fpath=($HOME/.dotfiles/zsh/scripts/completions $fpath)
+. $HOME/.dotfiles/zsh/scripts/bashmarks.sh
 
 zmodload zsh/complist
 autoload -U compinit promptinit colors vcs_info
