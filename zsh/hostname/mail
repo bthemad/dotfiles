@@ -2,6 +2,7 @@
 ###############
 ### Aliases ###
 ###############
+alias gst='git status'
 
 ###################
 ### Environment ###
