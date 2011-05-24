@@ -107,5 +107,5 @@ setopt NO_BEEP                      # Silence is beautiful
 setopt AUTO_CD                      # Change directory just by it's name
 setopt CORRECT                      # Correct misprints
 setopt NO_CORRECT_ALL               # Try to correct even arguments
-setopt NOCLOBBER                    # Prevent from accidentally overwriting a file
+# setopt NOCLOBBER                    # Prevent from accidentally overwriting a file
 
