@@ -39,6 +39,7 @@ alias vmstart='nohup VBoxHeadless --startvm "srv32" --vrde=off &'
 # Locale for iTerm
 export LANG=ru_RU.UTF-8
 export EDITOR='cvim'
+alias mvd="mvim -R - &>/dev/null"
 
 ##########
 ## Path ##

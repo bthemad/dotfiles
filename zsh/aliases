@@ -62,10 +62,12 @@ alias mscp='rsync --progress --partial --rsh="ssh" -4'
 
 # Add tab to MacVim with this file
 alias avim='mvim --remote-tab-silent'
+
+alias _='sudo'
 ################
 ## Navigation ##
 ################
-alias cdb='cd -'
+alias cdd='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....="cd ../../.."
@@ -108,6 +110,8 @@ extract () {
     fi
 }
 
+alias x=extract
+
 # Search through history
 h () { history 0 | grep $1 }
 
@@ -120,3 +124,5 @@ run-with-sudo() { LBUFFER="sudo $LBUFFER" }
 zle -N run-with-sudo
 bindkey '^X^E' run-with-sudo
 
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
