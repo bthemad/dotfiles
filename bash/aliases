@@ -74,3 +74,7 @@ jsgrep () {
     curdir=./
     grep -rin --include="*.js" "${1}" ${2:-$curdir}
 }
+
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+
