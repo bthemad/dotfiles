@@ -115,6 +115,16 @@ alias x=extract
 # Search through history
 h () { history 0 | grep $1 }
 
+# Functions to search through
+phpgrep () {
+    curdir=./
+    grep -ri --include="*.php" "${1}" ${2:-$curdir}
+}
+
+jsgrep () {
+    curdir=./
+    grep -ri --include="*.js" "${1}" ${2:-$curdir}
+}
 
 #########
 ## ZLE ##
