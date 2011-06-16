@@ -28,6 +28,27 @@ function gg() {
     git commit -a -v -m "$*"
 }
 
+alias hgst='hg st'
+alias hga='hg add'
+alias hgc='hg ci'
+alias hgu='hg up'
+alias hgl='hg log'
+alias hgll='hg log -l5'
+alias hglb='hg log -b .'
+alias hglbl='hg log -b . -l5'
+alias hggl='hg glog'
+alias hgull='hg pull'
+alias hgullu='hg pull -u'
+alias hgush='hg push'
+alias hgo='hg out'
+alias hgd='hg diff'
+
+# Mercurial commit with message
+function hgg() {
+    hg ci -m "$*"
+}
+
+
 # Horizontal line in shell
 alias hr='printf "%`tput cols`s"|tr " " "#"'
 
@@ -124,6 +145,11 @@ phpgrep () {
 jsgrep () {
     curdir=./
     grep -rin --include="*.js" "${1}" ${2:-$curdir}
+}
+
+allgrep () {
+    curdir=./
+    grep -rin "${1}" ${2:-$curdir}
 }
 
 #########
