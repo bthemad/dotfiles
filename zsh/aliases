@@ -18,7 +18,8 @@ alias gcb='git checkout -b'
 alias gb='git branch'
 alias gbs='git show-branch'
 alias gba='git branch -a'
-alias gd='git diff | mate'
+alias gd='git diff'
+alias gdc='git diff --cached'
 alias gull='git pull'
 alias gush='git push'
 alias gt='git tag'
@@ -30,12 +31,14 @@ function gg() {
 
 alias hgst='hg st'
 alias hga='hg add'
+alias hgarm='hg addremove'
 alias hgc='hg ci'
 alias hgu='hg up'
 alias hgl='hg log'
 alias hgll='hg log -l5'
 alias hglb='hg log -b .'
 alias hglbl='hg log -b . -l5'
+alias hglr='hg log -r'
 alias hggl='hg glog'
 alias hgull='hg pull'
 alias hgullu='hg pull -u'
@@ -83,6 +86,9 @@ alias mscp='rsync --progress --partial --rsh="ssh" -4'
 
 # Add tab to MacVim with this file
 alias avim='mvim --remote-tab-silent'
+
+# Kdiff
+alias kdiff='/Applications/kdiff3.app/Contents/MacOS/kdiff3'
 
 alias _='sudo'
 ################
