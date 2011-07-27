@@ -1,0 +1,11 @@
+#!/usr/bin/zsh
+###############
+### Aliases ###
+###############
+
+###################
+### Environment ###
+###################
+export PYTHONPATH="/Library/Python/2.6/site-packages:$PYTHONPATH"
+# Path to my bin
+export PATH=/Users/alexander/bin:$PATH

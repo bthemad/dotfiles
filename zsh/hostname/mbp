@@ -53,9 +53,3 @@ export PATH=/usr/local/bin:$PATH
 # Path to my bin
 export PATH=/Users/akudryashov/bin:$PATH
 
-#############
-## Plugins ##
-#############
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi

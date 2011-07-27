@@ -18,7 +18,8 @@ alias gcb='git checkout -b'
 alias gb='git branch'
 alias gbs='git show-branch'
 alias gba='git branch -a'
-alias gd='git diff | mate'
+alias gd='git diff'
+alias gdc='git diff --cached'
 alias gull='git pull'
 alias gush='git push'
 alias gt='git tag'
@@ -27,6 +28,30 @@ alias gt='git tag'
 function gg() {
     git commit -a -v -m "$*"
 }
+
+alias hgst='hg st'
+alias hga='hg add'
+alias hgarm='hg addremove'
+alias hgc='hg ci'
+alias hgu='hg up'
+alias hguc='hg up -C'
+alias hgl='hg log'
+alias hgll='hg log -l5'
+alias hglb='hg log -b .'
+alias hglbl='hg log -b . -l5'
+alias hglr='hg log -r'
+alias hggl='hg glog'
+alias hgull='hg pull'
+alias hgullu='hg pull -u'
+alias hgush='hg push'
+alias hgo='hg out'
+alias hgd='hg diff'
+
+# Mercurial commit with message
+function hgg() {
+    hg ci -m "$*"
+}
+
 
 # Horizontal line in shell
 alias hr='printf "%`tput cols`s"|tr " " "#"'
@@ -62,6 +87,9 @@ alias mscp='rsync --progress --partial --rsh="ssh" -4'
 
 # Add tab to MacVim with this file
 alias avim='mvim --remote-tab-silent'
+
+# Kdiff
+alias kdiff='/Applications/kdiff3.app/Contents/MacOS/kdiff3'
 
 alias _='sudo'
 ################
@@ -115,6 +143,21 @@ alias x=extract
 # Search through history
 h () { history 0 | grep $1 }
 
+# Functions to search through
+phpgrep () {
+    curdir=./
+    grep -rin --include="*.php" "${1}" ${2:-$curdir}
+}
+
+jsgrep () {
+    curdir=./
+    grep -rin --include="*.js" "${1}" ${2:-$curdir}
+}
+
+allgrep () {
+    curdir=./
+    grep -rin "${1}" ${2:-$curdir}
+}
 
 #########
 ## ZLE ##

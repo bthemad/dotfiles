@@ -63,3 +63,18 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
+
+# Functions to search through
+phpgrep () {
+    curdir=./
+    grep -rin --include="*.php" "${1}" ${2:-$curdir}
+}
+
+jsgrep () {
+    curdir=./
+    grep -rin --include="*.js" "${1}" ${2:-$curdir}
+}
+
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+
