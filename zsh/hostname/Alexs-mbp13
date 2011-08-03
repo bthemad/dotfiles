@@ -6,6 +6,8 @@
 ###################
 ### Environment ###
 ###################
-export PYTHONPATH="/Library/Python/2.6/site-packages:$PYTHONPATH"
 # Path to my bin
+export PATH=/usr/local/share/python:$PATH
+export PATH=/usr/local/sbin:$PATH
 export PATH=/Users/alexander/bin:$PATH
+export PATH=/usr/local/bin:$PATH
