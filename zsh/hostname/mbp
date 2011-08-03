@@ -18,17 +18,17 @@ alias ngstop='sudo /usr/local/sbin/nginx -s stop'
 alias ngres='sudo /usr/local/sbin/nginx -s reload'
 alias ngcd='cd /usr/local/Cellar/nginx/0.7.67/conf/'
 # Mysql
-alias mystart='/usr/local/share/mysql/mysql.server start'
-alias mystop='/usr/local/share/mysql/mysql.server stop'
-alias myres='/usr/local/share/mysql/mysql.server restart'
+alias mystart='/usr/local/bin/mysql.server start'
+alias mystop='/usr/local/bin/mysql.server stop'
+alias myres='/usr/local/bin/mysql.server restart'
 # PHP-FPM
 alias fpstart='sudo /usr/local/bin/php-fpm start'
 alias fpstop='sudo /usr/local/bin/php-fpm stop'
 alias fpres='sudo /usr/local/bin/php-fpm restart'
 # PHP-Stack
-alias phpstart='sudo /usr/local/sbin/nginx && /usr/local/share/mysql/mysql.server start && sudo /usr/local/bin/php-fpm start'
-alias phpstop='sudo /usr/local/sbin/nginx -s stop && /usr/local/share/mysql/mysql.server stop && sudo /usr/local/bin/php-fpm stop'
-alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/share/mysql/mysql.server restart && sudo /usr/local/bin/php-fpm restart'
+alias phpstart='sudo /usr/local/sbin/nginx && /usr/local/bin/mysql.server start && sudo /usr/local/bin/php-fpm start'
+alias phpstop='sudo /usr/local/sbin/nginx -s stop && /usr/local/bin/mysql.server stop && sudo /usr/local/bin/php-fpm stop'
+alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/bin/mysql.server restart && sudo /usr/local/bin/php-fpm restart'
 
 # VM server
 alias vmstart='nohup VBoxHeadless --startvm "srv32" --vrde=off &'

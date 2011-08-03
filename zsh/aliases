@@ -110,7 +110,7 @@ alias md='mkdir -p'
 alias rd=rmdir
 
 # Push and Pop made simple
-alias d='dirs -v'
+alias di='dirs -v'
 alias pu=pushd
 alias po=popd
 
