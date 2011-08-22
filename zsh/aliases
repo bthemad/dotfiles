@@ -149,6 +149,16 @@ phpgrep () {
     grep -rin --include="*.php" "${1}" ${2:-$curdir}
 }
 
+phmlgrep () {
+    curdir=./
+    grep -rin --include="*.phtml" "${1}" ${2:-$curdir}
+}
+
+phagrep () {
+    curdir=./
+    grep -rin --include="*.phtml" --include="*.php" "${1}" ${2:-$curdir}
+}
+
 jsgrep () {
     curdir=./
     grep -rin --include="*.js" "${1}" ${2:-$curdir}
