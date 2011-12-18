@@ -2,10 +2,7 @@
 	name = Alex Kudryashov
 	email = alex.kudryashov@gmail.com
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	ui = auto
+	ui = true
 [push]
 	default = matching
 [alias]
