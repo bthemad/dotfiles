@@ -31,7 +31,8 @@ alias phpstop='sudo /usr/local/sbin/nginx -s stop && /usr/local/bin/mysql.server
 alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/bin/mysql.server restart && sudo /usr/local/bin/php-fpm restart'
 
 # VM server
-alias vmstart='nohup VBoxHeadless --startvm "srv32" --vrde=off &'
+alias vmstart='nohup VBoxHeadless --startvm "srv" --vrde=off > /dev/null &'
+alias vmstop='VBoxManage controlvm "srv" poweroff'
 
 ###################
 ### Environment ###
