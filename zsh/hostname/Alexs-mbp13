@@ -2,6 +2,16 @@
 ###############
 ### Aliases ###
 ###############
+# Update all standard branches
+alias hgupall="\
+    cd /Users/alexander/src/tuenti/current && hg pull -u && \
+    cd /Users/alexander/src/tuenti/integration && hg pull -u && \
+    cd /Users/alexander/src/tuenti/hotfix && hg pull -u && \
+    cd /Users/alexander/src/tuenti/stable && hg pull -u && \
+    cd /Users/alexander/src/tuenti/release && hg pull -u"
+
+alias rsbint="/Users/alexander/bin/rsbranch.py integration"
+alias rsbrel="/Users/alexander/bin/rsbranch.py release"
 
 ###################
 ### Environment ###
