@@ -10,8 +10,12 @@ alias hgupall="\
     cd /Users/alexander/src/tuenti/stable && hg pull -u && \
     cd /Users/alexander/src/tuenti/release && hg pull -u"
 
-alias rsbint="/Users/alexander/bin/rsbranch.py integration"
-alias rsbrel="/Users/alexander/bin/rsbranch.py release"
+alias rsint="/Users/alexander/bin/rsbranch.py integration"
+alias rsrel="/Users/alexander/bin/rsbranch.py release"
+
+# VM server
+alias vmstart='VBoxManage startvm tst'
+alias vmstop='VBoxManage controlvm "tst" acpipowerbutton'
 
 ###################
 ### Environment ###
