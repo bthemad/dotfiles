@@ -17,6 +17,8 @@ alias rsrel="/Users/alexander/bin/rsbranch.py release"
 alias vmstart='VBoxManage startvm tst'
 alias vmstop='VBoxManage controlvm "tst" acpipowerbutton'
 
+alias fd='fab -f ~/bin/deploy.py'
+
 ###################
 ### Environment ###
 ###################
