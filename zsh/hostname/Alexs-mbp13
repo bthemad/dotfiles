@@ -25,3 +25,12 @@ export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/Users/alexander/bin:$PATH
 export PATH=/usr/local/bin:$PATH
+
+# Python Paths
+if [ -d ~/.local/bin ]; then
+  export PATH=~/.local/bin:$PATH
+fi
+
+if [ -d ~/.local/lib/python2.7/site-packages ]; then
+  export PYTHONPATH=~/.local/lib/python2.7/site-packages:$PYTHONPATH
+fi
