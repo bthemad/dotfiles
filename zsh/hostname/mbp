@@ -52,5 +52,5 @@ export PATH=/usr/local/sbin:$PATH
 # Path to bin
 export PATH=/usr/local/bin:$PATH
 # Path to my bin
-export PATH=/Users/akudryashov/bin:$PATH
+export PATH=/Users/alexander/bin:$PATH
 
