@@ -16,6 +16,10 @@ alias vmstop='VBoxManage controlvm "tst" acpipowerbutton'
 
 alias fd='fab -f ~/bin/deploy.py'
 
+alias mdb='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
+
+alias cccl="tail -n 20 /Library/Logs/CCC.log"
+
 ###################
 ### Environment ###
 ###################
