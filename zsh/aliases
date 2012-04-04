@@ -46,6 +46,9 @@ alias hgullu='hg pull -u'
 alias hgush='hg push'
 alias hgo='hg out'
 alias hgd='hg diff'
+alias hgr='hg revert'
+alias hgp='hg purge'
+alias hgrp='hg revert --all && hg purge'
 
 # Mercurial commit with message
 function hgg() {

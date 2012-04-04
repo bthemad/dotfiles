@@ -8,7 +8,8 @@ alias hgupall="\
     cd /Users/alexander/src/tuenti/integration && hg pull -u && \
     cd /Users/alexander/src/tuenti/hotfix && hg pull -u && \
     cd /Users/alexander/src/tuenti/stable && hg pull -u && \
-    cd /Users/alexander/src/tuenti/release && hg pull -u"
+    cd /Users/alexander/src/tuenti/release && hg pull -u && \
+    cd /Users/alexander/src/tuenti/current"
 
 # VM server
 alias vmstart='VBoxManage startvm tst'
@@ -37,3 +38,8 @@ fi
 if [ -d ~/.local/lib/python2.7/site-packages ]; then
   export PYTHONPATH=~/.local/lib/python2.7/site-packages:$PYTHONPATH
 fi
+
+# Alchemy shit
+export PATH=/usr/local/src/flex_sdk/bin:$PATH
+. /usr/local/src/alchemy/alchemy-setup
+export PATH=$PATH:$ALCHEMY_HOME/ackhacks
