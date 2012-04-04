@@ -39,7 +39,7 @@ alias vmstop='VBoxManage controlvm "srv" poweroff'
 ###################
 # Locale for iTerm
 export LANG=ru_RU.UTF-8
-export EDITOR='cvim'
+export EDITOR='vim'
 alias mvd="mvim -R - &>/dev/null"
 
 ##########
