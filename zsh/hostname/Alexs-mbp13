@@ -43,3 +43,8 @@ fi
 export PATH=/usr/local/src/flex_sdk/bin:$PATH
 . /usr/local/src/alchemy/alchemy-setup
 export PATH=$PATH:$ALCHEMY_HOME/ackhacks
+
+# Android shit
+export ANDROID_NDK=/Users/alexander/android/android-ndk
+export ANDROID_SDK=/Users/alexander/android/android-sdk
+export PATH=$PATH:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$ANDROID_NDK
