@@ -15,11 +15,31 @@ alias hgupall="\
 alias vmstart='VBoxManage startvm tst'
 alias vmstop='VBoxManage controlvm "tst" acpipowerbutton'
 
+alias bms='nohup VBoxHeadless --startvm "ubuntu" --vrde=off > /tmp/noh.out &'
+alias bmp='VBoxManage controlvm "ubuntu" acpipowerbutton'
+
+alias lvm='VBoxManage list runningvms'
+
 alias fd='fab -f ~/bin/deploy.py'
 
 alias mdb='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
 
 alias cccl="tail -n 20 /Library/Logs/CCC.log"
+
+# Android web_rtc aliases
+app_home='/Users/alexander/src/webrtc-jingle/app'
+alias ndb='cd $app_home && ndk-build -j2 NDK_DEBUG=1 V=1'
+alias ndbb='cd $app_home && ndk-build NDK_DEBUG=1 V=1'
+alias ndc='cd $app_home && ndk-build clean'
+
+alias ndg='cd $app_home && ndk-gdb --force --verbose'
+alias ndgs='cd $app_home && ndk-gdb --force --verbose --start'
+
+alias ndu='adb uninstall com.tuenti.voice'
+alias ndi='cd $app_home && adb install bin/VoiceTest.apk'
+
+alias nds='adb logcat | ndk-stack -sym $app_home/obj/local/armeabi'
+alias ndsl='ndk-stack -sym $app_home/obj/local/armeabi -dump ~/Desktop/cat.log'
 
 ###################
 ### Environment ###
@@ -43,6 +63,17 @@ fi
 export PATH=$PATH:/Users/alexander/android/android-ndk
 export PATH=$PATH:/Users/alexander/android/android-sdk/tools
 export PATH=$PATH:/Users/alexander/android/android-sdk/platform-tools
+export PATH=$PATH:/Users/alexander/android/android-ndk
+export PATH=$PATH:/Users/alexander/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin
+export ANDROID_NDK_ROOT=/Users/alexander/android/android-ndk
+export ANDROID_SDK_ROOT=/Users/alexander/android/android-sdk
+export CHROME_SRC=/Users/alexander/src/and_webrtc/trunk
 
 # Depot tools for webRtc
 export PATH=$PATH:/Users/alexander/src/depot_tools
+
+# SWT Shit
+export PATH_TO_SWTOOLKIT=/Users/alexander/src/swtoolkit/
+export PATH=$PATH:$PATH_TO_SWTOOLKIT
+
+

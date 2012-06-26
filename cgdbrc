@@ -1,0 +1,7 @@
+set arrowstyle=long
+set autosourcereload
+set ignorecase
+set tabstop=4
+set winminheight=2
+set wrapscan
+
