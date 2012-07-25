@@ -44,6 +44,9 @@ alias ndsl='ndk-stack -sym $app_home/obj/local/armeabi -dump ~/Desktop/cat.log'
 ###################
 ### Environment ###
 ###################
+# Path to completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # Path to my bin
 export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/sbin:$PATH
@@ -69,13 +72,13 @@ export ANDROID_NDK_ROOT=/Users/alexander/android/android-ndk
 export ANDROID_SDK_ROOT=/Users/alexander/android/android-sdk
 export ANDROID_HOME=/Users/alexander/android/android-sdk
 export CHROME_SRC=/Users/alexander/src/and_webrtc/trunk
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 
 # Depot tools for webRtc
 export PATH=$PATH:/Users/alexander/src/depot_tools
 
 # SWT Shit
-export PATH_TO_SWTOOLKIT=/Users/alexander/src/swtoolkit/
+export PATH_TO_SWTOOLKIT=/Users/alexander/src/swtoolkit
 export PATH=$PATH:$PATH_TO_SWTOOLKIT
 
 

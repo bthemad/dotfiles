@@ -5,7 +5,6 @@
 # Add additional completions dir to path
 fpath=($HOME/.dotfiles/zsh/scripts/completions $fpath)
 . $HOME/.dotfiles/zsh/scripts/bashmarks.sh
-. $HOME/.dotfiles/zsh/scripts/git-flow-completion.sh
 
 
 zmodload zsh/complist
