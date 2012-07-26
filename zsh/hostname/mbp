@@ -22,13 +22,13 @@ alias mystart='/usr/local/bin/mysql.server start'
 alias mystop='/usr/local/bin/mysql.server stop'
 alias myres='/usr/local/bin/mysql.server restart'
 # PHP-FPM
-alias fpstart='sudo /usr/local/bin/php-fpm start'
-alias fpstop='sudo /usr/local/bin/php-fpm stop'
-alias fpres='sudo /usr/local/bin/php-fpm restart'
+alias fpstart='sudo /usr/local/bin/php-fpmd start'
+alias fpstop='sudo /usr/local/bin/php-fpmd stop'
+alias fpres='sudo /usr/local/bin/php-fpmd restart'
 # PHP-Stack
-alias phpstart='sudo /usr/local/sbin/nginx && /usr/local/bin/mysql.server start && sudo /usr/local/bin/php-fpm start'
-alias phpstop='sudo /usr/local/sbin/nginx -s stop && /usr/local/bin/mysql.server stop && sudo /usr/local/bin/php-fpm stop'
-alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/bin/mysql.server restart && sudo /usr/local/bin/php-fpm restart'
+alias phpstart='sudo /usr/local/sbin/nginx && /usr/local/bin/mysql.server start && sudo /usr/local/bin/php-fpmd start'
+alias phpstop='sudo /usr/local/sbin/nginx -s stop && /usr/local/bin/mysql.server stop && sudo /usr/local/bin/php-fpmd stop'
+alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/bin/mysql.server restart && sudo /usr/local/bin/php-fpmd restart'
 
 # VM server
 alias vmstart='nohup VBoxHeadless --startvm "srv" --vrde=off > /dev/null &'
@@ -45,6 +45,8 @@ alias mvd="mvim -R - &>/dev/null"
 ##########
 ## Path ##
 ##########
+# Path to completions
+fpath=(/usr/local/share/zsh-completions $fpath)
 # path to kdiff3
 export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS/:$PATH
 # Path to sbin
