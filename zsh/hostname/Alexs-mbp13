@@ -27,7 +27,7 @@ alias mdb='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.con
 alias cccl="tail -n 20 /Library/Logs/CCC.log"
 
 # Android web_rtc aliases
-app_home='/Users/alexander/src/webrtc-jingle/app'
+app_home='/Users/alexander/src/webrtc-client/trunk/src'
 alias ndb='cd $app_home && ndk-build -j2 NDK_DEBUG=1 V=1'
 alias ndbb='cd $app_home && ndk-build NDK_DEBUG=1 V=1'
 alias ndc='cd $app_home && ndk-build clean'
