@@ -12,13 +12,10 @@ alias hgupall="\
     cd /Users/alexander/src/tuenti/current"
 
 # VM server
-alias vmstart='VBoxManage startvm tst'
-alias vmstop='VBoxManage controlvm "tst" acpipowerbutton'
+alias vmstart='nohup VBoxHeadless --startvm "srv" --vrde=off > /tmp/noh.out &'
+alias vmstop='VBoxManage controlvm "srv" acpipowerbutton'
 
-alias bms='nohup VBoxHeadless --startvm "ubuntu" --vrde=off > /tmp/noh.out &'
-alias bmp='VBoxManage controlvm "ubuntu" acpipowerbutton'
-
-alias lvm='VBoxManage list runningvms'
+alias vmlist='VBoxManage list runningvms'
 
 alias fd='fab -f ~/bin/deploy.py'
 
@@ -63,15 +60,16 @@ if [ -d ~/.local/lib/python2.7/site-packages ]; then
 fi
 
 # Android shit
-export PATH=$PATH:/Users/alexander/android/android-ndk
-export PATH=$PATH:/Users/alexander/android/android-sdk/tools
-export PATH=$PATH:/Users/alexander/android/android-sdk/platform-tools
-export PATH=$PATH:/Users/alexander/android/android-ndk
-export PATH=$PATH:/Users/alexander/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin
-export ANDROID_NDK_ROOT=/Users/alexander/android/android-ndk
-export ANDROID_SDK_ROOT=/Users/alexander/android/android-sdk
-export ANDROID_HOME=/Users/alexander/android/android-sdk
-export ANDROID_NDK_HOME=/Users/alexander/android/android-ndk
+android_path='/Users/alexander/android'
+export PATH=$PATH:$android_path/android-ndk
+export PATH=$PATH:$android_path/android-sdk/tools
+export PATH=$PATH:$android_path/android-sdk/platform-tools
+export PATH=$PATH:$android_path/android-ndk
+export PATH=$PATH:$android_path/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin
+export ANDROID_NDK_ROOT=$android_path/android-ndk
+export ANDROID_SDK_ROOT=$android_path/android-sdk
+export ANDROID_HOME=$android_path/android-sdk
+export ANDROID_NDK_HOME=$android_path/android-ndk
 export CHROME_SRC=/Users/alexander/src/webrtc-client/trunk
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 
@@ -82,4 +80,5 @@ export PATH=$PATH:/Users/alexander/src/depot_tools
 export PATH_TO_SWTOOLKIT=/Users/alexander/src/swtoolkit
 export PATH=$PATH:$PATH_TO_SWTOOLKIT
 
-
+# SCons
+export SCONS_DIR=/Users/alexander/src/scons/engine
