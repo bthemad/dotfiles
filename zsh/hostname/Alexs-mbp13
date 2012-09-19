@@ -65,13 +65,17 @@ export PATH=$PATH:$android_path/android-ndk
 export PATH=$PATH:$android_path/android-sdk/tools
 export PATH=$PATH:$android_path/android-sdk/platform-tools
 export PATH=$PATH:$android_path/android-ndk
-export PATH=$PATH:$android_path/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin
 export ANDROID_NDK_ROOT=$android_path/android-ndk
 export ANDROID_SDK_ROOT=$android_path/android-sdk
 export ANDROID_HOME=$android_path/android-sdk
 export ANDROID_NDK_HOME=$android_path/android-ndk
 export CHROME_SRC=/Users/alexander/src/webrtc-client/trunk
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+
+#DISTCCD config
+export PATH=$PATH:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin
+export PATH=$PATH:$ANDROID_NDK_ROOT/toolchains/x86-4.4.3/prebuilt/darwin-x86/bin
+export PATH=$PATH:$ANDROID_NDK_ROOT/toolchains/mipsel-linux-android-4.4.3/prebuilt/darwin-x86/bin
 
 # Depot tools for webRtc
 export PATH=$PATH:/Users/alexander/src/depot_tools
