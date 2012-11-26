@@ -23,11 +23,35 @@ alias gdc='git diff --cached'
 alias gull='git pull'
 alias gush='git push'
 alias gt='git tag'
+
 alias gl='git log -C --decorate' 
 alias gll='git log -C --decorate -n 5' 
 alias glg="git log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s'"
+alias gld='git log --pretty=format:"%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]" --decorate --date=short'
 alias gls='git log -C --decorate --stat'
 alias glp='git log -C --decorate --stat -p'
+alias glf='git log -u'
+
+alias glr="git lr"
+alias gdr="git dr"
+
+alias gfs='git fs'
+alias gfr='git fsr'
+alias ggs='git gr'
+alias ggr='git grr'
+
+alias gsl='git sl'
+alias gss='git ss'
+alias gssp='git ssp'
+alias gsp='git sp'
+alias gsa='git sa'
+
+alias gr='git r'
+alias gr1='git r1'
+alias grh='git rh'
+alias grh1='git rh1'
+
+
 
 # Commith with message
 function gg() {
