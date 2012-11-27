@@ -37,7 +37,7 @@
     dump = cat-file -p
 
     dr  = "!f() { git diff "$1"^.."$1"; }; f"
-    lr  = "!f() { git ls "$1"^.."$1"; }; f"
+    sr  = "!f() { git ls "$1"^.."$1"; }; f"
 
     fs = "!git ls-files | grep -i"
     gr = grep -Ii
