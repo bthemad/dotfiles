@@ -23,22 +23,43 @@
     lg = log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s'
     lga = log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s' --all
     l19 = log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s' --all -19
-
     lsd = log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s' --all --simplify-by-decoration
+
     ru = remote update
     sb = show-branch --sha1-name
     ls-del = ls-files -d
     ls-mod = ls-files -m # включая удалённые файлы
     ls-new = ls-files --exclude-standard -o
     ls-ign = ls-files --exclude-standard -o -i
-    ka = !gitx --all
-    kdo = !gitx --date-order
-    kado = !gitx --all --date-order
-    kasd = !gitx --all --simplify-by-decoration
 
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     type = cat-file -t
     dump = cat-file -p
+
+    dr  = "!f() { git diff "$1"^.."$1"; }; f"
+    sr  = "!f() { git ls "$1"^.."$1"; }; f"
+
+    fs = "!git ls-files | grep -i"
+    gr = grep -Ii
+
+    grr = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
+    fsr = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git ls-files | grep -i $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
+
+    sl = stash list
+    ss = stash save
+    ssp = stash save -p
+    sp = stash pop
+    sa = stash apply
+
+    svf = svn fetch
+    svr = svn rebase -l
+    svl = svn log --oneline --show-commit
+
+    r = reset
+    r1 = reset HEAD^
+    rh = reset --hard
+    hr1 = reset HEAD^ --hard
+
 
 [core]
 	editor = /Applications/MacVim.app/Contents/MacOS/Vim
