@@ -62,13 +62,17 @@ zstyle ':vcs_info:*:prompt:*' actionformats "(%b%c%u:%a)" # format for actions
 zstyle ':vcs_info:*:prompt:*' formats "(%b%c%u)"        # default format
 zstyle ':vcs_info:*:prompt:*' nvcsformats "no"          # Set answer to "no" if we're not in repo
 
+function venv_info() {
+    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
+}
+
 function precmd() {
     vcs_info 'prompt'
     if [[ $vcs_info_msg_0_ != "no" ]];
     then
-        PROMPT="%~${vcs_info_msg_0_} $ "
+        PROMPT="$(venv_info)%~${vcs_info_msg_0_} $ "
     else
-        PROMPT=$DEFPROMPT
+        PROMPT=$(venv_info)$DEFPROMPT
     fi
 }
 
