@@ -58,7 +58,7 @@
     r = reset
     r1 = reset HEAD^
     rh = reset --hard
-    hr1 = reset HEAD^ --hard
+    rh1 = reset HEAD^ --hard
 
 
 [core]
