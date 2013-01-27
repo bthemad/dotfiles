@@ -1,16 +1,6 @@
 ###############
 ### Aliases ###
 ###############
-# Show My Tasks #
-alias st='icalBuddy uncompletedTasks'
-
-# Google Docs Edit #
-alias gde='google docs edit --editor vim --title'
-alias gdg='google docs get --title'
-alias gdl='google docs list name'
-alias gdlf='google docs list name --folder'
-alias gdu='google docs upload'
-
 # ServerStack Stuff #
 # Nginx
 alias ngstart='sudo /usr/local/sbin/nginx'
@@ -34,6 +24,11 @@ alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/bin/mysql.serve
 alias vmstart='nohup VBoxHeadless --startvm "srv" --vrde=off > /dev/null &'
 alias vmstop='VBoxManage controlvm "srv" poweroff'
 
+# Try out git-smart
+alias gsull="git smart-pull"
+alias gsmrg="git smart-merge"
+alias gsml="git smart-log"
+
 ###################
 ### Environment ###
 ###################
@@ -48,11 +43,11 @@ alias mvd="mvim -R - &>/dev/null"
 # Path to completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 # path to kdiff3
-export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS/:$PATH
+export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS:$PATH
 # Path to sbin
 export PATH=/usr/local/sbin:$PATH
 # Path to bin
 export PATH=/usr/local/bin:$PATH
 # Path to my bin
-export PATH=/Users/alexander/bin:$PATH
+export PATH=/Users/alex/bin:$PATH
 
