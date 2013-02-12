@@ -1,6 +1,7 @@
 ###############
 ### Aliases ###
 ###############
+alias ack='ack -a'
 # ServerStack Stuff #
 # Nginx
 alias ngstart='sudo /usr/local/sbin/nginx'
