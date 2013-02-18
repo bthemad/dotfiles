@@ -34,7 +34,7 @@ alias gsml="git smart-log"
 ### Environment ###
 ###################
 # Locale for iTerm
-export LANG=ru_RU.UTF-8
+export LANG=en_US.UTF-8
 export EDITOR='vim'
 alias mvd="mvim -R - &>/dev/null"
 
