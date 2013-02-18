@@ -38,6 +38,9 @@ export LANG=ru_RU.UTF-8
 export EDITOR='vim'
 alias mvd="mvim -R - &>/dev/null"
 
+# Use emacs keybinding for editing (specially for tmux)
+bindkey -e
+
 ##########
 ## Path ##
 ##########
