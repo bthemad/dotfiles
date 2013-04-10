@@ -44,8 +44,6 @@ bindkey -e
 ##########
 ## Path ##
 ##########
-# Path to completions
-fpath=(/usr/local/share/zsh-completions $fpath)
 # path to kdiff3
 export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS:$PATH
 # Path to sbin

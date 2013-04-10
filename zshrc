@@ -1,6 +1,3 @@
-#. ~/.dotfiles/zsh/env
-#. ~/.dotfiles/zsh/config
-#. ~/.dotfiles/zsh/aliases
 droot=~/.dotfiles/zsh
 
 # Load common files
