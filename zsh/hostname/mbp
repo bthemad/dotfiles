@@ -52,4 +52,5 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 # Path to my bin
 export PATH=/Users/alex/bin:$PATH
-
+# Path to user python pip installs
+export PATH=/Users/alex/Library/Python/2.7/bin:$PATH
