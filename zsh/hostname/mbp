@@ -30,6 +30,7 @@ alias gsull="git smart-pull"
 alias gsmrg="git smart-merge"
 alias gsml="git smart-log"
 
+
 ###################
 ### Environment ###
 ###################
@@ -41,16 +42,15 @@ alias mvd="mvim -R - &>/dev/null"
 # Use emacs keybinding for editing (specially for tmux)
 bindkey -e
 
+
 ##########
 ## Path ##
 ##########
 # path to kdiff3
 export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS:$PATH
-# Path to sbin
-export PATH=/usr/local/sbin:$PATH
-# Path to bin
-export PATH=/usr/local/bin:$PATH
 # Path to my bin
 export PATH=/Users/alex/bin:$PATH
 # Path to user python pip installs
 export PATH=/Users/alex/Library/Python/2.7/bin:$PATH
+# zsh syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

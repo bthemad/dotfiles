@@ -24,6 +24,7 @@ for s in mp3 wav aac m4a \
     alias -s $s=open
 done
 
+
 ###################
 ### Environment ###
 ###################
@@ -33,6 +34,15 @@ export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
+
+
+##########
+## Path ##
+##########
+# Path to sbin
+export PATH=/usr/local/sbin:$PATH
+# Path to bin
+export PATH=/usr/local/bin:$PATH
 
 
 #############
