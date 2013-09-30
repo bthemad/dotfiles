@@ -95,6 +95,9 @@
 ;; Give me path from my bash
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+;; Start with empty scratch
+(setq inhibit-splash-screen t
+      initial-scratch-message nil)
 
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
 
