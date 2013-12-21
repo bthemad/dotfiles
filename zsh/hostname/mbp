@@ -1,7 +1,6 @@
 ###############
 ### Aliases ###
 ###############
-alias ack='ack -a'
 # ServerStack Stuff #
 # Nginx
 alias ngstart='sudo /usr/local/sbin/nginx'
@@ -46,8 +45,6 @@ bindkey -e
 ##########
 ## Path ##
 ##########
-# path to kdiff3
-export PATH=/Applications/Utilities/kdiff3.app/Contents/MacOS:$PATH
 # Path to my bin
 export PATH=/Users/alex/bin:$PATH
 # Path to user python pip installs
