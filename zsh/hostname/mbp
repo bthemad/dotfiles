@@ -24,6 +24,11 @@ alias phpres='sudo /usr/local/sbin/nginx -s reload && /usr/local/bin/mysql.serve
 alias vmstart='nohup VBoxHeadless --startvm "srv" --vrde=off > /dev/null &'
 alias vmstop='VBoxManage controlvm "srv" poweroff'
 
+# hwsw vm commands
+alias hwrun='vmrun -T fusion start "/Users/alex/Documents/Virtual Machines.localized/Fedora 64-bit.vmwarevm/Fedora 64-bit.vmx" nogui'
+alias hwstop='vmrun -T fusion stop "/Users/alex/Documents/Virtual Machines.localized/Fedora 64-bit.vmwarevm/Fedora 64-bit.vmx" soft'
+alias hwdown='vmrun -T fusion stop "/Users/alex/Documents/Virtual Machines.localized/Fedora 64-bit.vmwarevm/Fedora 64-bit.vmx" hard'
+
 # Try out git-smart
 alias gsull="git smart-pull"
 alias gsmrg="git smart-merge"
