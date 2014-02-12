@@ -56,6 +56,6 @@ export PATH=/Users/alex/bin:$PATH
 export PATH=/Users/alex/Library/Python/2.7/bin:$PATH
 # zsh syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# tools from android studio
-export PATH=/Applications/Android\ Studio.app/sdk/tools:$PATH
-export PATH=/Applications/Android\ Studio.app/sdk/platform-tools:$PATH
+# Algs4 shortcuts
+alias fb="findbugs-algs4"
+alias cs="checkstyle-algs4"
