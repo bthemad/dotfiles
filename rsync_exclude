@@ -1,1 +1,5 @@
 .svn
+rsync.sh
+.ssh
+.bash_history
+
