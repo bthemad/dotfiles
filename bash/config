@@ -10,6 +10,9 @@ source ~/.dotfiles/bash/scripts/git_flow_completion
 # SSH Auto Completion of Remote Hosts
 complete -W "$(echo `cat ~/.ssh/config | grep '^Host ' | colrm 1 5`)" ssh
 
+# Locale
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 ############
 ## Prompt ##

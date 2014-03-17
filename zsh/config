@@ -116,3 +116,7 @@ setopt CORRECT                      # Correct misprints
 setopt NO_CORRECT_ALL               # Try to correct even arguments
 # setopt NOCLOBBER                    # Prevent from accidentally overwriting a file
 
+# Setting locale
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
