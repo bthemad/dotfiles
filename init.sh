@@ -13,3 +13,5 @@ ln -s ~/.dotfiles/gitconfig ./.gitconfig
 ln -s ~/.dotfiles/tmux.conf ./.tmux.conf
 ln -s ~/.dotfiles/zshrc ./.zshrc
 ln -s ~/.dotfiles/cgdbrc ./.cgdbrc
+ln -s ~/.dotfiles/rsync_exclude ./.rsync_exclude
+

@@ -1,10 +1,10 @@
 [user]
-	name = Alex Kudryashov
-	email = alex.kudryashov@gmail.com
+    name = Alex Kudryashov
+    email = alex.kudryashov@gmail.com
 [color]
-	ui = true
+    ui = true
 [push]
-	default = matching
+    default = matching
 [alias]
     s = status
     b = branch
@@ -60,6 +60,5 @@
     rh = reset --hard
     rh1 = reset HEAD^ --hard
 
-
 [core]
-	editor = /Applications/MacVim.app/Contents/MacOS/Vim
+    editor = /Applications/MacVim.app/Contents/MacOS/Vim
