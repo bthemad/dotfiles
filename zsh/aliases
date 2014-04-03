@@ -201,6 +201,12 @@ allgrep () {
     grep -rin "${1}" ${2:-$curdir}
 }
 
+# Alias for journaling app
+alias jn="jrnl -n5"
+alias jnl="jrnl -n5 @log"
+alias jel="jrnl --edit @log"
+alias jl="jrnl @log"
+
 #########
 ## ZLE ##
 #########
