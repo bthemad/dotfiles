@@ -1,5 +1,6 @@
 alias lsa='ls -oha'
 alias lsag='ls -lha'
+alias cm="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/Cellar/composer/1.0.0-alpha8/libexec/composer.phar"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
