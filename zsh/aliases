@@ -203,8 +203,7 @@ allgrep () {
 
 # Alias for journaling app
 alias jn="jrnl -n5"
-alias jll="jrnl @log"
-alias jle="jrnl --edit @log"
+alias jle="jrnl \#log --edit "
 alias jl="jrnl \#log"
 
 #########
