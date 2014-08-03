@@ -5,11 +5,6 @@
 alias ls='ls -F -G'
 # Use MacVim as vim
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-# Open man pages with Preview
-function manp () {
-    man -t $* | ps2pdf - - | open -f -a Preview
-}
-
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 
@@ -49,4 +44,4 @@ export PATH=/usr/local/bin:$PATH
 ## Plugins ##
 #############
 # Autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+[[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh
