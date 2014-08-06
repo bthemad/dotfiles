@@ -16,4 +16,3 @@ hostname=`hostname -s`
 if [ -f ${droot}/hostname/${hostname} ]; then
     . ${droot}/hostname/${hostname}
 fi
-source ~/.fzf.zsh
