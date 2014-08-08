@@ -32,9 +32,6 @@ alias gls='git log -C --decorate --stat'
 alias glp='git log -C --decorate --stat -p'
 alias glf='git log -u'
 
-alias gsr="git lr"
-alias gdr="git dr"
-
 alias gfs='git fs'
 alias gfsr='git fsr'
 alias ggs='git gr'
