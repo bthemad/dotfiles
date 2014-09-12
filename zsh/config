@@ -11,7 +11,7 @@ fpath=(/usr/local/share/zsh/site-functions $fpath)
 
 
 zmodload zsh/complist
-autoload -U compinit promptinit colors vcs_info
+autoload -U compinit promptinit colors vcs_info zmv
 colors
 compinit -u
 promptinit
