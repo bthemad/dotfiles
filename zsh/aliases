@@ -3,8 +3,12 @@
 ### zsh specific aliases ###
 ############################
 alias :q=exit
-function fn() {
-    find ./ -name $1
+function f() {
+    find ./ -name $@
+}
+
+function ff() {
+    find ./ -name '*'"$@"'*' | grep "$@"
 }
 
 # Git aliases
@@ -83,7 +87,8 @@ function hgg() {
 
 
 # Horizontal line in shell
-alias hr='printf "%`tput cols`s"|tr " " "#"'
+alias hrrr='printf "%`tput cols`s"|tr " " "#"'
+alias hr='hrrr && hrrr && hrrr'
 
 # List
 alias lsa='ls -lha'
@@ -108,9 +113,6 @@ alias 7='cd +7'
 alias 8='cd +8'
 alias 9='cd +9'
 
-# Ruby console
-alias irb='irb --prompt simple --readline -r irb/completion'
-
 # Something like scp, but with rsync
 alias mscp='rsync --progress --partial --rsh="ssh" -4'
 
@@ -124,10 +126,10 @@ alias _='sudo'
 ################
 ## Navigation ##
 ################
-alias cdd='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 # Make and go
 function take() {
@@ -137,11 +139,6 @@ function take() {
 
 alias md='mkdir -p'
 alias rd=rmdir
-
-# Push and Pop made simple
-alias di='dirs -v'
-alias pu=pushd
-alias po=popd
 
 
 ###############
@@ -199,7 +196,6 @@ allgrep () {
 }
 
 # Alias for journaling app
-alias jn="jrnl -n5"
 alias jle="jrnl \#log --edit "
 alias jl="jrnl \#log"
 
