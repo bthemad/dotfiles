@@ -45,3 +45,5 @@ export PATH=/usr/local/bin:$PATH
 #############
 # Autojump
 [[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh
+# Syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

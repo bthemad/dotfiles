@@ -20,5 +20,3 @@ bindkey -e
 export PATH=/Users/alex/bin:$PATH
 # Path to user python pip installs
 export PATH=/Users/alex/Library/Python/2.7/bin:$PATH
-# zsh syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
