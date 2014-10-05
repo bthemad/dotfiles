@@ -22,22 +22,18 @@
     lsp = log -C --stat -p --decorate
     lg = log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s'
     lga = log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s' --all
-    l19 = log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s' --all -19
     lsd = log --graph '--pretty=tformat:%Cblue%h%Creset %Cgreen%ar%Creset %Cblue%d%Creset %s' --all --simplify-by-decoration
 
     ru = remote update
     sb = show-branch --sha1-name
     ls-del = ls-files -d
-    ls-mod = ls-files -m # включая удалённые файлы
+    ls-mod = ls-files -m
     ls-new = ls-files --exclude-standard -o
     ls-ign = ls-files --exclude-standard -o -i
 
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     type = cat-file -t
     dump = cat-file -p
-
-    dr  = "!f() { git diff "$1"^.."$1"; }; f"
-    sr  = "!f() { git ls "$1"^.."$1"; }; f"
 
     fs = "!git ls-files | grep -i"
     gr = grep -Ii
@@ -59,6 +55,8 @@
     r1 = reset HEAD^
     rh = reset --hard
     rh1 = reset HEAD^ --hard
+
+    prstash = "!f() { git fetch $1 refs/pull-requests/$2/from:$3; } ; f"
 
 [core]
     editor = /Applications/MacVim.app/Contents/MacOS/Vim

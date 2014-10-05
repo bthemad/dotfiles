@@ -3,8 +3,12 @@
 ### zsh specific aliases ###
 ############################
 alias :q=exit
-function fn() {
-    find ./ -name $1
+function f() {
+    find ./ -name $@
+}
+
+function ff() {
+    find ./ -name '*'"$@"'*' | grep "$@"
 }
 
 # Git aliases
@@ -31,9 +35,6 @@ alias gld='git log --pretty=format:"%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn
 alias gls='git log -C --decorate --stat'
 alias glp='git log -C --decorate --stat -p'
 alias glf='git log -u'
-
-alias gsr="git lr"
-alias gdr="git dr"
 
 alias gfs='git fs'
 alias gfsr='git fsr'
@@ -86,7 +87,8 @@ function hgg() {
 
 
 # Horizontal line in shell
-alias hr='printf "%`tput cols`s"|tr " " "#"'
+alias hrrr='printf "%`tput cols`s"|tr " " "#"'
+alias hr='hrrr && hrrr && hrrr'
 
 # List
 alias lsa='ls -lha'
@@ -111,9 +113,6 @@ alias 7='cd +7'
 alias 8='cd +8'
 alias 9='cd +9'
 
-# Ruby console
-alias irb='irb --prompt simple --readline -r irb/completion'
-
 # Something like scp, but with rsync
 alias mscp='rsync --progress --partial --rsh="ssh" -4'
 
@@ -127,10 +126,10 @@ alias _='sudo'
 ################
 ## Navigation ##
 ################
-alias cdd='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 # Make and go
 function take() {
@@ -140,11 +139,6 @@ function take() {
 
 alias md='mkdir -p'
 alias rd=rmdir
-
-# Push and Pop made simple
-alias di='dirs -v'
-alias pu=pushd
-alias po=popd
 
 
 ###############
@@ -192,9 +186,11 @@ algrep () {
 }
 
 # Alias for journaling app
-alias jn="jrnl -n5"
 alias jle="jrnl \#log --edit "
 alias jl="jrnl \#log"
+
+# Check what VMs are running currently
+alias vmst="VBoxManage list runningvms"
 
 #########
 ## ZLE ##
