@@ -6,7 +6,6 @@
 fpath=($HOME/.dotfiles/zsh/scripts/completions $fpath)
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(/usr/local/share/zsh/site-functions $fpath)
-. $HOME/.dotfiles/zsh/scripts/bashmarks.sh
 . $HOME/.dotfiles/zsh/scripts/kill.sh
 
 
