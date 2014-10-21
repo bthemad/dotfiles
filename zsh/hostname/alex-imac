@@ -5,11 +5,6 @@ alias lsa='ls -oha'
 alias lsag='ls -lha'
 alias cm="composer"
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
 # git overriding
 export GIT_AUTHOR_EMAIL='alexander.kudryashov@softonic.com'
 export GIT_AUTHOR_NAME='Alexander Kudryashov'
