@@ -16,3 +16,5 @@ alias c3phpunit="php -d include_path=/Users/alexander.kudryashov/softonic/src/li
 ##########
 # Path to my bin
 export PATH=/Users/alexander.kudryashov/bin:$PATH
+# GVM
+[[ -s "/Users/alexander.kudryashov/.gvm/bin/gvm-init.sh" ]] && source "/Users/alexander.kudryashov/.gvm/bin/gvm-init.sh"
