@@ -60,3 +60,4 @@
 
 [core]
     editor = /Applications/MacVim.app/Contents/MacOS/Vim
+    excludesfile = /Users/alex/.gitignore
