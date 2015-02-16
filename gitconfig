@@ -57,6 +57,7 @@
     rh1 = reset HEAD^ --hard
 
     prstash = "!f() { git fetch $1 refs/pull-requests/$2/from:$3; } ; f"
+    create-pull-request = !sh -c 'stash pull-request $0'
 
 [core]
     editor = /Applications/MacVim.app/Contents/MacOS/Vim
