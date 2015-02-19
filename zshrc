@@ -4,38 +4,38 @@ export PLATFORM=${platform}
 
 antigen use oh-my-zsh
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+antigen bundles <<EOBUNDLES
+    # Common plugins
+    zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-completions src
+    git
+    autojump
+    colorize
+    extract
 
-antigen bundle yerinle/zsh-gvm
-antigen bundle zsh-users/zsh-syntax-highlighting
+    # Programming
+    ## PHP
+    composer
 
-# Common plugins
-antigen bundle git
-antigen bundle autojump
-antigen bundle colorize
-antigen bundle extract
+    ## Python
+    python
+    pip
 
-# Programming
-## PHP
-antigen bundle composer
+    ## Groovy
+    grails
+    gradle
+    yerinle/zsh-gvm
 
-## Python
-antigen bundle pip
+    ## Ruby
+    gem
+EOBUNDLES
 
-## Groovy
-antigen bundle grails
-antigen bundle gradle
-
-## Ruby
-antigen bundle gem
 
 # Platform-specific bundles
 if [[ $PLATFORM == 'darwin' ]]; then
     antigen bundle brew
-    antigen bundle brew-cask
     antigen bundle copydir
     antigen bundle copyfile
-
 fi
 
 antigen apply
