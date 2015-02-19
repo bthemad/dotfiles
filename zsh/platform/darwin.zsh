@@ -2,6 +2,7 @@
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias stt='st .'
+alias ij="open -a /Applications/IntelliJ\ IDEA\ 14\ CE.app"
 
 
 # Environment
