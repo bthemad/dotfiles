@@ -40,14 +40,12 @@ fi
 
 antigen apply
 
-## My customizations
+## My customisation on-top of oh-my-zsh
 antigen bundle $HOME/.dotfiles/zsh/custom
 
 
+# Load platform-specific configs and aliases
 droot=~/.dotfiles/zsh
-# Load platform-specific shortcuts
-
-
 if [ -f ${droot}/platform/${platform}.zsh ]; then
     source ${droot}/platform/${platform}.zsh
 fi
