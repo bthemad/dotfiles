@@ -1,9 +1,8 @@
 #!/usr/local/bin/zsh
-################## 
-## Load modules ## 
+##################
+## Load modules ##
 ##################
 # Add additional completions dir to path
-fpath=($HOME/.dotfiles/zsh/scripts/completions $fpath)
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 . $HOME/.dotfiles/zsh/scripts/kill.sh
@@ -16,6 +15,8 @@ compinit -u
 promptinit
 vcs_info
 
+# Load my personal completions
+. ~/.dotfiles/zsh/completions/_grails
 
 ####################
 ## Autocompletion ##
@@ -29,16 +30,16 @@ fignore=(DS_Store $fignore)         # Ignore DS_Store during completion
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh_cache
 # Try complete, then do extended and substring, then do correction
-zstyle ':completion:*' completer _complete _complete:-extended _complete:-substring _correct 
+zstyle ':completion:*' completer _complete _complete:-extended _complete:-substring _correct
 # Extended one. Do case-insensitive and _,+,- are special, so p_h => public_html
 zstyle ':completion:*:complete-extended:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[+._-]=*'
 # Do some substrings
 zstyle ':completion:*:complete-substring:*' matcher-list 'm:{a-z}={A-Z} l:|=**'
 
 # Tweak completion list
-zstyle ':completion:*' format '%B--- %d%b' 
-zstyle ':completion:*:descriptions'    format $'Completing %B%d%b' 
-zstyle ':completion:*:messages' format '%B%U--- %d%u%b' 
+zstyle ':completion:*' format '%B--- %d%b'
+zstyle ':completion:*:descriptions'    format $'Completing %B%d%b'
+zstyle ':completion:*:messages' format '%B%U--- %d%u%b'
 zstyle ':completion:*:warnings' format "%B--- Just nothing...%b"
 zstyle ':completion:*' group-name ''
 
@@ -119,4 +120,3 @@ setopt NO_CORRECT_ALL               # Try to correct even arguments
 # Setting locale
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
