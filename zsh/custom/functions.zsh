@@ -1,25 +1,25 @@
 # Commit fast
-function gg() {
+ggg() {
     git commit -a -v -m "$*"
 }
 
-function hgg() {
+hgg() {
     hg ci -m "$*"
 }
 
 
 # Find & grep
-function phgrep() {
+phgrep() {
     curdir=./
     grep -rin --include="*.php" "${1}" ${2:-$curdir}
 }
 
-function jsgrep() {
+jsgrep() {
     curdir=./
     grep -rin --include="*.js" "${1}" ${2:-$curdir}
 }
 
-function algrep() {
+algrep() {
     curdir=./
     grep -rin "${1}" ${2:-$curdir}
 }
