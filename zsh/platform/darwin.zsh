@@ -1,6 +1,7 @@
 # Aliases
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias stt='st .'
 
 
 # Environment
@@ -26,3 +27,4 @@ export HOMEBREW_GITHUB_API_TOKEN=2252bd8c5c32c3386fa8df32ddd064c8f6e61c9a
 # Path
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+

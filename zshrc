@@ -1,21 +1,42 @@
 source ~/.antigen/antigen.zsh
+platform=`uname | awk '{print tolower($0)}'`
+export PLATFORM=${platform}
 
 antigen use oh-my-zsh
 
-antigen bundle grails
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 antigen bundle yerinle/zsh-gvm
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Common plugins
 antigen bundle git
-antigen bundle mercurial
 antigen bundle autojump
+antigen bundle colorize
+antigen bundle extract
 
-# PHP plugins
+# Programming
+## PHP
 antigen bundle composer
 
-# Python plugins
+## Python
 antigen bundle pip
+
+## Groovy
+antigen bundle grails
+antigen bundle gradle
+
+## Ruby
+antigen bundle gem
+
+# Platform-specific bundles
+if [[ $PLATFORM == 'darwin' ]]; then
+    antigen bundle brew
+    antigen bundle brew-cask
+    antigen bundle copydir
+    antigen bundle copyfile
+
+fi
 
 antigen apply
 
@@ -25,8 +46,8 @@ antigen bundle $HOME/.dotfiles/zsh/custom
 
 droot=~/.dotfiles/zsh
 # Load platform-specific shortcuts
-platform=`uname | awk '{print tolower($0)}'`
-export PLATFORM=${platform}
+
+
 if [ -f ${droot}/platform/${platform}.zsh ]; then
     source ${droot}/platform/${platform}.zsh
 fi

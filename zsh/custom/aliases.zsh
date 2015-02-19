@@ -35,3 +35,17 @@ alias jl="jrnl \#log"
 
 # Check what VMs are running currently
 alias vmst="VBoxManage list runningvms"
+
+# Access zshrc
+alias zshrc='vim ~/.zshrc'
+
+# Fast taildu -sh *
+alias t='tail -f'
+
+# Tell me where my free space is?
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+
+# Find things fast
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
