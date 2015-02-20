@@ -19,7 +19,7 @@ function precmd() {
     vcs_info 'prompt'
     if [[ $vcs_info_msg_0_ != "no" ]];
     then
-        PROMPT="$(venv_info)%~${vcs_info_msg_0_} $ "
+        PROMPT="$(venv_info)%~ ${vcs_info_msg_0_} $ "
     else
         PROMPT=$(venv_info)$DEFPROMPT
     fi

@@ -1,64 +1,47 @@
 source ~/.antigen/antigen.zsh
 platform=`uname | awk '{print tolower($0)}'`
-export PLATFORM=${platform}
+hostname=`hostname -s`
+droot=~/.dotfiles/zsh
+
+# Let's plug in our completions
+if [ -d /usr/local/share/zsh-completions ]; then
+    fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+
+# Let's plug in our very custom completions
+if [ -d ${droot}/completions ]; then
+    fpath=(${droot}/completions $fpath)
+fi
 
 antigen use oh-my-zsh
 
 antigen bundles <<EOBUNDLES
-    # Common plugins
-    zsh-users/zsh-syntax-highlighting
-    zsh-users/zsh-completions src
     git
-    autojump
-    colorize
-    extract
-
-    # Programming
-    ## PHP
-    composer
-
-    ## Python
     python
-    pip
-
-    ## Groovy
-    grails
-    gradle
-    yerinle/zsh-gvm
-
-    ## Ruby
-    gem
 EOBUNDLES
-
-
-# Platform-specific bundles
-if [[ $PLATFORM == 'darwin' ]]; then
-    antigen bundle brew
-    antigen bundle copydir
-    antigen bundle copyfile
-fi
 
 antigen apply
 
-## My customizations
-antigen bundle $HOME/.dotfiles/zsh/custom
+# My customizations
+## All custom scripts
+if [ -d ${droot}/custom ]; then
+  for file in ${droot}/custom/*.zsh; do
+    source $file
+  done
+fi
 
-
-droot=~/.dotfiles/zsh
-# Load platform-specific shortcuts
-
-
+## Load platform-specific shortcuts
 if [ -f ${droot}/platform/${platform}.zsh ]; then
     source ${droot}/platform/${platform}.zsh
 fi
 
-# Load machine-specific files, if presented
-hostname=`hostname -s`
+
+## Load machine-specific files, if presented
 if [ -f ${droot}/hostname/${hostname}.zsh ]; then
     source ${droot}/hostname/${hostname}.zsh
 fi
 
-# Install fzf for Ctrl+R
+## Install fzf for Ctrl+R
 if [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
 fi

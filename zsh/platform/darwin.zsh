@@ -1,3 +1,28 @@
+# Plugins
+## Syntax highlighting
+if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+## Substring search
+if [ -f /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+    source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
+fi
+
+## AutoJump
+if [ -f /usr/local/etc/profile.d/autojump.sh ]; then
+    source /usr/local/etc/profile.d/autojump.sh
+fi
+
+ # bind UP and DOWN arrow keys
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+# bind P and N for EMACS mode
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+
 # Aliases
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
@@ -28,4 +53,3 @@ export HOMEBREW_GITHUB_API_TOKEN=2252bd8c5c32c3386fa8df32ddd064c8f6e61c9a
 # Path
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-
