@@ -46,6 +46,11 @@ export PIP_RESPECT_VIRTUALENV=true
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
+# GVM
+if [ -f ~/.gvm/bin/gvm-init.sh ]; then
+    source ~/.gvm/bin/gvm-init.sh
+fi
+
 # Github token for Homebrew
 export HOMEBREW_GITHUB_API_TOKEN=2252bd8c5c32c3386fa8df32ddd064c8f6e61c9a
 
