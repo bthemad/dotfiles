@@ -1,6 +1,6 @@
 # Commit fast
 ggg() {
-    git commit -a -v -m "$*"
+    git add -A && git commit -v -m "$*"
 }
 
 hgg() {
