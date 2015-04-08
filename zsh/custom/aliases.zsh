@@ -10,7 +10,8 @@ alias gct='git checkout -t'
 alias gstl='git stash list'
 alias gstap='git stash save -p'
 
-alias gsts='git stash show'
+alias gsts='git stash save'
+alias gsto='git stash show'
 
 alias gls='git log -C --decorate --stat'
 alias glp='git log -C --decorate --stat -p'
