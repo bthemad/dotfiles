@@ -27,7 +27,11 @@ bindkey -M emacs '^N' history-substring-search-down
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias stt='st .'
-alias ij="open -a /Applications/IntelliJ\ IDEA\ 14\ CE.app"
+alias ij="open -a /Applications/IntelliJ\ IDEA\ 14.app"
+
+alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 
 
 # Environment
