@@ -16,6 +16,8 @@ alias gsto='git stash show'
 alias gls='git log -C --decorate --stat'
 alias glp='git log -C --decorate --stat -p'
 
+alias gdc='git diff --cached'
+
 
 # Misc
 ## Horizontal line in shell
