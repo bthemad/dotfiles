@@ -1,7 +1,7 @@
 # Environment
 ## git config overriding
-export GIT_AUTHOR_EMAIL='alexander.kudryashov@softonic.com'
-export GIT_AUTHOR_NAME='Alexander Kudryashov'
+export GIT_AUTHOR_EMAIL='akudryashov@newrelic.com'
+export GIT_AUTHOR_NAME='Alex Kudryashov'
 
 
 # Path
