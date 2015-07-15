@@ -33,6 +33,9 @@ alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
 alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 
+alias notifyOk='terminal-notifier -title "Terminal" -message "Success"'
+alias notifyErr='terminal-notifier -title "Terminal" -message "Error"'
+
 
 # Environment
 export LANG=en_US.UTF-8
