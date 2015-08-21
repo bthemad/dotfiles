@@ -18,6 +18,8 @@ alias glp='git log -C --decorate --stat -p'
 
 alias gdc='git diff --cached'
 
+alias gpu='git push --set-upstream'
+
 
 # Misc
 ## Horizontal line in shell
