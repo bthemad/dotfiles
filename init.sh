@@ -7,6 +7,8 @@ cd ~
 [[ -f ~/.zshrc ]] && rm ~/.zshrc
 [[ -f ~/.gdbinit ]] && rm ~/.gdbinit
 [[ -f ~/.cgdbrc ]] && rm ~/.cgdbrc
+[[ -f ~/.pdbrc ]] && rm ~/.pdbrc
+[[ -f ~/.pdbrc.py ]] && rm ~/.pdbrc.py
 
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/bashrc ~/.bashrc
@@ -16,6 +18,8 @@ ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/gdbinit ~/.gdbinit
 ln -s ~/.dotfiles/cgdbrc ~/.cgdbrc
+ln -s ~/.dotfiles/pdbrc ~/.pdbrc
+ln -s ~/.dotfiles/pdbrc.py ~/.pdbrc.py
 
 if [[ ! -d ~/.antigen ]]; then
     git clone https://github.com/zsh-users/antigen.git ~/.antigen
