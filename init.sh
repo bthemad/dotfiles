@@ -9,6 +9,7 @@ cd ~
 [[ -f ~/.cgdbrc ]] && rm ~/.cgdbrc
 [[ -f ~/.pdbrc ]] && rm ~/.pdbrc
 [[ -f ~/.pdbrc.py ]] && rm ~/.pdbrc.py
+[[ -f ~/.ptpython/config.py ]] && rm ~/.ptpython/config.py
 
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/bashrc ~/.bashrc
@@ -20,6 +21,7 @@ ln -s ~/.dotfiles/gdbinit ~/.gdbinit
 ln -s ~/.dotfiles/cgdbrc ~/.cgdbrc
 ln -s ~/.dotfiles/pdbrc ~/.pdbrc
 ln -s ~/.dotfiles/pdbrc.py ~/.pdbrc.py
+mkdir -p ~/.ptpython && ln -s ~/.dotfiles/ptpython-config.py ~/.ptpython/config.py
 
 if [[ ! -d ~/.antigen ]]; then
     git clone https://github.com/zsh-users/antigen.git ~/.antigen
