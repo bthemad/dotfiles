@@ -113,10 +113,15 @@ def configure(repl):
 
         b.insert_text(' ')
 
-    @repl.add_key_binding(Keys.ControlT)
+    @repl.add_key_binding(Keys.ControlT, Keys.ControlT)
     def _(event):
-        ' Show me the sidebar '
+        ' Toggle side bar '
         repl.show_sidebar = not repl.show_sidebar
+
+    @repl.add_key_binding(Keys.ControlT, Keys.ControlP)
+    def _(event):
+        ' Toggle paste mode '
+        repl.paste_mode = not repl.paste_mode
 
 # Custom colorscheme for the UI. See `ptpython/layout.py` and
 # `ptpython/style.py` for all possible tokens.
