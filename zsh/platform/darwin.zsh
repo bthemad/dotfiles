@@ -68,3 +68,6 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # Path
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+
+# Ruby
+export RI="--format ansi --width 70"
