@@ -1,8 +1,5 @@
 autoload -Uz vcs_info
 
-# Let's do git info natively
-DEFPROMPT='%m:%~ $ '   # default prompt
-
 zstyle ':vcs_info:*' enable git hg svn                  # only git, hg and svn
 zstyle ':vcs_info:*:prompt:*' check-for-changes true    # can be slower
 zstyle ':vcs_info:*:prompt:*' unstagedstr "*"           # unstaged cause "*"
@@ -17,11 +14,10 @@ function venv_info() {
 
 function precmd() {
     vcs_info 'prompt'
-    if [[ $vcs_info_msg_0_ != "no" ]];
-    then
+    if [[ -n $vcs_info_msg_0_ ]]; then
         PROMPT="$(venv_info)%~ ${vcs_info_msg_0_} $ "
     else
-        PROMPT=$(venv_info)$DEFPROMPT
+        PROMPT=$(venv_info)'%~ $ '
     fi
 }
 
