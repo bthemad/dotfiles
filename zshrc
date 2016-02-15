@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 source ~/.antigen/antigen.zsh
 platform=`uname | awk '{print tolower($0)}'`
 hostname=`hostname -s`
@@ -18,6 +19,7 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
     git
     python
+    brew
 EOBUNDLES
 
 antigen apply
@@ -45,3 +47,4 @@ fi
 if [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
 fi
+# zprof
