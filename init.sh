@@ -10,6 +10,8 @@ cd ~
 [[ -f ~/.pdbrc ]] && rm ~/.pdbrc
 [[ -f ~/.pdbrc.py ]] && rm ~/.pdbrc.py
 [[ -f ~/.ptpython/config.py ]] && rm ~/.ptpython/config.py
+[[ -f ~/.pryrc ]] && rm ~/.pryrc
+[[ -f ~/.jrnl_config ]] && rm ~/.jrnl_config
 
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/bashrc ~/.bashrc
@@ -21,6 +23,8 @@ ln -s ~/.dotfiles/gdbinit ~/.gdbinit
 ln -s ~/.dotfiles/cgdbrc ~/.cgdbrc
 ln -s ~/.dotfiles/pdbrc ~/.pdbrc
 ln -s ~/.dotfiles/pdbrc.py ~/.pdbrc.py
+ln -s ~/.dotfiles/pryrc ~/.pryrc
+ln -s ~/.dotfiles/jrnl_config ~/.jrnl_config
 mkdir -p ~/.ptpython && ln -s ~/.dotfiles/ptpython-config.py ~/.ptpython/config.py
 
 if [[ ! -d ~/.antigen ]]; then

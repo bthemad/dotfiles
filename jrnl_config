@@ -1,0 +1,13 @@
+{
+  "default_hour": 9,
+  "linewrap": false,
+  "encrypt": false,
+  "default_minute": 0,
+  "tagsymbols": "#",
+  "editor": "vim",
+  "timeformat": "%Y-%m-%d %H:%M",
+  "highlight": true,
+  "journals": {
+    "default": "~/Dropbox/Apps/Day One/Journal.dayone"
+  }
+}
