@@ -54,3 +54,8 @@ alias duf='du -sh *'
 # Find things fast
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
+
+# Gradle wrapper
+alias gw='./gradlew'
+
+alias pcp='pwd | pbcopy'
