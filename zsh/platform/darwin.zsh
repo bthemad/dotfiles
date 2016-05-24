@@ -14,7 +14,7 @@ if [ -f /usr/local/etc/profile.d/autojump.sh ]; then
     source /usr/local/etc/profile.d/autojump.sh
 fi
 
-# iTerm shell integration
+## iTerm shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
  # bind UP and DOWN arrow keys
@@ -29,6 +29,7 @@ bindkey -M emacs '^N' history-substring-search-down
 # Aliases
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias stt='st .'
 alias ij="open -a /Applications/IntelliJ\ IDEA\ 14.app"
 
@@ -48,7 +49,9 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 # VirtualEnv specific
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # pip specific
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
@@ -74,3 +77,4 @@ export PATH=/usr/local/sbin:$PATH
 
 # Ruby
 export RI="--format ansi --width 70"
+# eval "$(rbenv init -)"
