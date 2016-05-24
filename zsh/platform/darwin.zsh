@@ -14,6 +14,9 @@ if [ -f /usr/local/etc/profile.d/autojump.sh ]; then
     source /usr/local/etc/profile.d/autojump.sh
 fi
 
+# iTerm shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
  # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
