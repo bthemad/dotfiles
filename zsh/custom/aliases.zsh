@@ -20,6 +20,8 @@ alias gdc='git diff --cached'
 
 alias gpu='git push --set-upstream'
 
+alias gfp='git fetch -p'
+
 
 # Misc
 ## Horizontal line in shell
