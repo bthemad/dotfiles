@@ -22,6 +22,9 @@ alias gpu='git push --set-upstream'
 
 alias gfp='git fetch -p'
 
+alias gr='git reset'
+alias grh='git reset --hard'
+
 
 # Misc
 ## Horizontal line in shell
@@ -61,7 +64,7 @@ alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
 # Gradle wrapper
-alias gwc='./gradlew'
+alias gwc='./gradlew check'
 alias gwcc='./gradlew clean check'
 alias gw='./gradlew -x findbugsMain -x findbugsTest -x checkstyleTest -x checkstyleMain'
 
