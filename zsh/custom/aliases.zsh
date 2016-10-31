@@ -43,8 +43,7 @@ alias :q=exit
 alias jle="jrnl \#log --edit "
 alias jl="jrnl \#log"
 alias jdg="jrnl \#weekly -n 1 | awk '/Goals for the week/,0'"
-alias jdge="jrnl \#weekly -n 1 --edit"
-
+alias jwk="touch /tmp/weekly.md && jrnl \#weekly -n 1 | awk '/Goals for the week/,0' > /tmp/weekly.md && jrnl \#daily -from 'last Monday' >> /tmp/weekly.md && st /tmp/weekly.md"
 
 # Check what VMs are running currently
 alias vmst="VBoxManage list runningvms"
