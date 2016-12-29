@@ -14,7 +14,7 @@ function venv_info() {
 
 function precmd() {
     vcs_info 'prompt'
-    if [[ -n $vcs_info_msg_0_ ]]; then
+    if [[ (-n $vcs_info_msg_0_) && ($vcs_info_msg_0_ != no)]]; then
         PROMPT="$(venv_info)%~ ${vcs_info_msg_0_} $ "
     else
         PROMPT=$(venv_info)'%~ $ '
