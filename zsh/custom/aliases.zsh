@@ -65,6 +65,8 @@ alias ff='find . -type f -name'
 # Gradle wrapper
 alias gwc='./gradlew check'
 alias gwcc='./gradlew clean check'
-alias gw='./gradlew -x findbugsMain -x findbugsTest -x checkstyleTest -x checkstyleMain'
+alias gw='./gradlew -x findbugsMain -x findbugsTest \
+    -x checkstyleTest -x checkstyleMain \
+    -x jacocoFullReport -x jacocoTestReport -x checkCoverage'
 
 alias pcp='pwd | pbcopy'
