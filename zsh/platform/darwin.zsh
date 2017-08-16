@@ -1,3 +1,8 @@
+# Path
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+
 # Plugins
 ## Syntax highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
@@ -49,7 +54,7 @@ export EDITOR='vim'
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
 # VirtualEnv specific
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/opt/python/libexec/bin/python
 export WORKON_HOME=$HOME/.virtualenvs
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
@@ -71,11 +76,6 @@ export HOMEBREW_GITHUB_API_TOKEN=2252bd8c5c32c3386fa8df32ddd064c8f6e61c9a
 
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
-
-
-# Path
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
 
 # Ruby
 export RI="--format ansi --width 70"
