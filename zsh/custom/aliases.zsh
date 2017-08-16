@@ -23,7 +23,6 @@ alias gpu='git push --set-upstream'
 alias gfp='git fetch -p'
 
 alias gr='git reset'
-alias grh='git reset --hard'
 
 
 # Misc
@@ -56,6 +55,8 @@ alias duf='du -sh *'
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
+alias dsh='f() { docker exec -ti $1 /bin/bash }; f'
+
 # Gradle wrapper
 alias gwc='./gradlew check'
 alias gwcc='./gradlew clean check'
@@ -64,3 +65,5 @@ alias gw='./gradlew -x findbugsMain -x findbugsTest \
     -x jacocoFullReport -x jacocoTestReport -x checkCoverage'
 
 alias pcp='pwd | pbcopy'
+alias tsn='date +"%s"'
+alias tsf='date -r '
