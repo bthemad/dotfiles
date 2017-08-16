@@ -47,6 +47,13 @@ alias notifyErr='terminal-notifier -title "Terminal" -message "Error"'
 
 alias dm='docker-machine'
 
+# Alias for journaling app
+alias jj="jrnl \#log"
+alias jje="jrnl \#log --export text > ~/.jj.md && st ~/.jj.md"
+alias jji="dayone2 new -d 'Yesterday at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
+alias jjc="jrnl \#log --edit "
+alias jjw="touch /tmp/weekly.md && jrnl \#weekly -n 1 | awk '/Goals for the week/,0' > /tmp/weekly.md && jrnl \#daily -from 'last Monday' >> /tmp/weekly.md && st /tmp/weekly.md"
+alias jjm="jrnl \#weekly -n 4 > /tmp/monthly && st /tmp/monthly"
 
 # Environment
 export LANG=en_US.UTF-8

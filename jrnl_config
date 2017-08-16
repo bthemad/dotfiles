@@ -8,6 +8,6 @@
   "timeformat": "%Y-%m-%d %H:%M",
   "highlight": true,
   "journals": {
-    "default": "~/Dropbox/Apps/Day One/Journal.dayone"
+    "default": "~/.daily.txt"
   }
 }

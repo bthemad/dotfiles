@@ -39,12 +39,6 @@ alias avim='mvim --remote-tab-silent'
 
 alias :q=exit
 
-# Alias for journaling app
-alias jle="jrnl \#log --edit "
-alias jl="jrnl \#log"
-alias jdg="jrnl \#weekly -n 1 | awk '/Goals for the week/,0'"
-alias jwk="touch /tmp/weekly.md && jrnl \#weekly -n 1 | awk '/Goals for the week/,0' > /tmp/weekly.md && jrnl \#daily -from 'last Monday' >> /tmp/weekly.md && st /tmp/weekly.md"
-
 # Check what VMs are running currently
 alias vmst="VBoxManage list runningvms"
 
