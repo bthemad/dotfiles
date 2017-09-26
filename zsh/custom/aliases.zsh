@@ -52,17 +52,16 @@ alias dud='du -d 1 -h'
 alias duf='du -sh *'
 
 # Find things fast
-alias fd='find . -type d -name'
-alias ff='find . -type f -name'
+alias fd='f() { find . -type d -name "*$1*"}; f'
+alias ff='f() { find . -type f -name "*$1*"}; f'
 
 alias dsh='f() { docker exec -ti $1 /bin/bash }; f'
 
 # Gradle wrapper
-alias gwc='./gradlew check'
-alias gwcc='./gradlew clean check'
-alias gw='./gradlew -x findbugsMain -x findbugsTest \
-    -x checkstyleTest -x checkstyleMain \
-    -x jacocoFullReport -x jacocoTestReport -x checkCoverage'
+alias gwf='./gradlew'
+alias gwc='./gradlew -Ddisable.slow.tests=true check'
+alias gwcc='./gradlew -Ddisable.slow.tests=true clean check'
+alias gw='./gradlew -Ddisable.slow.tests=true -x findbugsMain -x findbugsTest -x checkstyleTest -x checkstyleMain -x jacocoFullReport -x jacocoTestReport -x checkCoverage'
 
 alias pcp='pwd | pbcopy'
 alias tsn='date +"%s"'
