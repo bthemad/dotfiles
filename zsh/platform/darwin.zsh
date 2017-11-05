@@ -5,8 +5,8 @@ if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; 
 fi
 
 ## Substring search
-if [ -f /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
-    source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
+if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+    source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
 ## AutoJump
