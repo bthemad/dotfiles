@@ -74,9 +74,6 @@ if [ -f ~/.gvm/bin/gvm-init.sh ]; then
     source ~/.gvm/bin/gvm-init.sh
 fi
 
-# Github token for Homebrew
-export HOMEBREW_GITHUB_API_TOKEN=2252bd8c5c32c3386fa8df32ddd064c8f6e61c9a
-
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home)
 

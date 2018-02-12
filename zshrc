@@ -43,6 +43,11 @@ if [ -f ${droot}/hostname/${hostname}.zsh ]; then
     source ${droot}/hostname/${hostname}.zsh
 fi
 
+## Finally load env file
+if [ -f ${droot}/env.zsh ]; then
+    source ${droot}/env.zsh
+fi
+
 ## Install fzf for Ctrl+R
 if [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
