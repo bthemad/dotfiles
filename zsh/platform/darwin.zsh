@@ -49,7 +49,7 @@ alias dm='docker-machine'
 
 # Alias for journaling app
 alias jj="jrnl \#log"
-alias jje="jrnl \#log --export text > ~/.jj.md && code --wait ~/.jj.md && dayone2 new -d 'Yesterday at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
+alias jje="jrnl \#log --export text > ~/.jj.md && st --wait ~/.jj.md && dayone2 new -d 'Yesterday at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
 
 # Environment
 export LANG=en_US.UTF-8
