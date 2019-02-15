@@ -36,20 +36,11 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias stt='st .'
-alias ij="open -a /Applications/IntelliJ\ IDEA\ 14.app"
-
-alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
-alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
-alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
-
-alias notifyOk='terminal-notifier -title "Terminal" -message "Success"'
-alias notifyErr='terminal-notifier -title "Terminal" -message "Error"'
-
-alias dm='docker-machine'
 
 # Alias for journaling app
 alias jj="jrnl \#log"
 alias jje="jrnl \#log --export text > ~/.jj.md && st --wait ~/.jj.md && dayone2 new -d 'Yesterday at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
+alias jjt="jrnl \#log --export text > ~/.jj.md && st --wait ~/.jj.md && dayone2 new -d 'Today at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
 
 # Environment
 export LANG=en_US.UTF-8

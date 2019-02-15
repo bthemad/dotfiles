@@ -58,10 +58,9 @@ alias ff='f() { find . -type f -name "*$1*"}; f'
 alias dsh='f() { docker exec -ti $1 /bin/bash }; f'
 
 # Gradle wrapper
-alias gwf='./gradlew'
-alias gwc='./gradlew -Ddisable.slow.tests=true check'
-alias gwcc='./gradlew -Ddisable.slow.tests=true clean check'
-alias gw='./gradlew -Ddisable.slow.tests=true -x findbugsMain -x findbugsTest -x checkstyleTest -x checkstyleMain -x jacocoFullReport -x jacocoTestReport -x checkCoverage'
+alias gw='./gradlew'
+alias gwc='./gradlew check'
+alias gwcc='./gradlew clean check'
 
 alias pcp='pwd | pbcopy'
 alias tsn='date +"%s"'
