@@ -36,6 +36,8 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias stt='st .'
+alias sm="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
+
 
 # Alias for journaling app
 alias jj="jrnl \#log"
@@ -66,7 +68,7 @@ if [ -f ~/.gvm/bin/gvm-init.sh ]; then
 fi
 
 # Java
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home -v11.0.4)
 
 # Ruby
 export RI="--format ansi --width 70"

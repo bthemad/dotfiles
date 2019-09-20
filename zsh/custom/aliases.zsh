@@ -65,3 +65,5 @@ alias gwcc='./gradlew clean check'
 alias pcp='pwd | pbcopy'
 alias tsn='date +"%s"'
 alias tsf='date -r '
+
+alias lsa='ls -la'
