@@ -67,9 +67,6 @@ if [ -f ~/.gvm/bin/gvm-init.sh ]; then
     source ~/.gvm/bin/gvm-init.sh
 fi
 
-# Java
-export JAVA_HOME=$(/usr/libexec/java_home -v11.0.4)
-
 # Ruby
 export RI="--format ansi --width 70"
 # eval "$(rbenv init -)"
