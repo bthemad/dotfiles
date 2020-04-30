@@ -41,6 +41,7 @@ alias sm="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
 
 # Alias for journaling app
 alias jj="jrnl \#log"
+alias jjc="echo "" > ~/.daily.txt"
 alias jje="jrnl \#log --export text > ~/.jj.md && st --wait ~/.jj.md && dayone2 new -d 'Yesterday at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
 alias jjt="jrnl \#log --export text > ~/.jj.md && st --wait ~/.jj.md && dayone2 new -d 'Today at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
 
