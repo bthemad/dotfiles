@@ -1,4 +1,6 @@
 # zmodload zsh/zprof
+DISABLE_MAGIC_FUNCTIONS=true
+
 source ~/.antigen/antigen.zsh
 platform=`uname | awk '{print tolower($0)}'`
 hostname=`hostname -s`
