@@ -6,23 +6,23 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 # Plugins
 ## Syntax highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 ## Substring search
-if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
-    source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+if [ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+    source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
 ## AutoJump
-if [ -f /usr/local/etc/profile.d/autojump.sh ]; then
-    source /usr/local/etc/profile.d/autojump.sh
+if [ -f /opt/homebrew/etc/profile.d/autojump.sh ]; then
+    source /opt/homebrew/etc/profile.d/autojump.sh
 fi
 
 ## iTerm shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
- # bind UP and DOWN arrow keys
+# bind UP and DOWN arrow keys
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down

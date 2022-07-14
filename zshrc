@@ -6,9 +6,12 @@ platform=`uname | awk '{print tolower($0)}'`
 hostname=`hostname -s`
 droot=~/.dotfiles/zsh
 
-# Let's plug in our completions
-if [ -d /usr/local/share/zsh-completions ]; then
-    fpath=(/usr/local/share/zsh-completions $fpath)
+# Homebrew zsh-completions
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
 fi
 
 # Let's plug in our very custom completions
