@@ -1,16 +1,16 @@
 # Path
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH=$(brew --prefix)/bin:$PATH
+export PATH=$(brew --prefix)/sbin:$PATH
+export PATH=$(brew --prefix)/opt/python@3.10/libexec/bin:$PATH
 
 # Plugins
 ## Syntax highlighting
-if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+if [ -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 ## Substring search
-if [ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+if [ -f $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
     source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
@@ -51,10 +51,10 @@ export EDITOR='vim'
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
 # VirtualEnv specific
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/opt/python/libexec/bin/python
+export VIRTUALENVWRAPPER_PYTHON=$(brew --prefix)/opt/python@3.10/libexec/bin/python
 export WORKON_HOME=$HOME/.virtualenvs
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
+if [ -f $(brew --prefix)/bin/virtualenvwrapper.sh ]; then
+    source $(brew --prefix)/bin/virtualenvwrapper.sh
 fi
 
 PYTHONWARNINGS=ignore
