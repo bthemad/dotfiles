@@ -33,11 +33,8 @@ bindkey -M emacs '^N' history-substring-search-down
 
 # Aliases
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias stt='st .'
-alias sm="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
-
+alias st="/opt/homebrew/bin/code"
+alias c="/opt/homebrew/bin/code"
 
 # Alias for journaling app
 alias jj="jrnl \#log"
