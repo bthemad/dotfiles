@@ -60,6 +60,6 @@
     create-pull-request = !sh -c 'stash pull-request $0'
 
 [core]
-    editor = /Applications/MacVim.app/Contents/MacOS/Vim
+    editor = subl --wait
 	excludesfile = /Users/alex/.gitignore
 	pager = diff-so-fancy | less --tabs=4 -RFX

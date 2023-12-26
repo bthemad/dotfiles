@@ -15,8 +15,8 @@ if [ -f $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substrin
 fi
 
 ## AutoJump
-if [ -f /opt/homebrew/etc/profile.d/autojump.sh ]; then
-    source /opt/homebrew/etc/profile.d/autojump.sh
+if [ -f $(brew --prefix)/etc/profile.d/autojump.sh ]; then
+    source $(brew --prefix)/etc/profile.d/autojump.sh
 fi
 
 ## iTerm shell integration
@@ -33,8 +33,8 @@ bindkey -M emacs '^N' history-substring-search-down
 
 # Aliases
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias st="/opt/homebrew/bin/code"
-alias c="/opt/homebrew/bin/code"
+alias st="$(brew --prefix)/bin/subl"
+alias c="$(brew --prefix)/bin/code"
 
 # Alias for journaling app
 alias jj="jrnl \#log"
