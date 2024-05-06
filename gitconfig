@@ -59,7 +59,17 @@
     prstash = "!f() { git fetch $1 refs/pull-requests/$2/from:$3; } ; f"
     create-pull-request = !sh -c 'stash pull-request $0'
 
+[diff]
+        tool = difftastic
+
+[difftool]
+        prompt = false
+
+[difftool "difftastic"]
+        cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+        difftool = true
 [core]
     editor = subl --new-window --wait
 	excludesfile = /Users/alex/.gitignore
-	pager = diff-so-fancy | less --tabs=4 -RFX

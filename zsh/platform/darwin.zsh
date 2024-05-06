@@ -14,10 +14,9 @@ if [ -f $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substrin
     source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
-## AutoJump
-if [ -f $(brew --prefix)/etc/profile.d/autojump.sh ]; then
-    source $(brew --prefix)/etc/profile.d/autojump.sh
-fi
+## Zoxide (AutoJump alternative)
+eval "$(zoxide init --cmd j zsh)"
+
 
 ## iTerm shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
