@@ -34,7 +34,7 @@ bindkey -M emacs '^N' history-substring-search-down
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias st="$(brew --prefix)/bin/subl"
 alias c="$(brew --prefix)/bin/code"
-
+alias z="/usr/local/bin/zed"
 # Alias for journaling app
 alias jj="jrnl \#log"
 alias jjc="echo "" > ~/.daily.txt"
