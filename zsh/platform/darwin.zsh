@@ -43,7 +43,7 @@ alias jjt="jrnl \#log --export text > ~/.jj.md && st --wait ~/.jj.md && dayone2 
 
 # Environment
 export LANG=en_US.UTF-8
-export EDITOR='vim'
+export EDITOR='zed'
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
 # VirtualEnv specific
