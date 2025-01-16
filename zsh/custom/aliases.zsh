@@ -19,6 +19,7 @@ alias glp='git log -C --decorate --stat -p'
 alias gdc='git diff --cached'
 
 alias gpu='git push --set-upstream'
+alias gpo='git push origin'
 
 alias gfp='git fetch -p'
 
