@@ -17,6 +17,10 @@ fi
 ## Zoxide (AutoJump alternative)
 eval "$(zoxide init --cmd j zsh)"
 
+## eza for ls if available
+if [ -f $(brew --prefix)/bin/eza ]; then
+    alias ls='eza'
+fi
 
 ## iTerm shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
