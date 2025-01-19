@@ -12,6 +12,7 @@ cd ~
 [[ -f ~/.ptpython/config.py ]] && rm ~/.ptpython/config.py
 [[ -f ~/.pryrc ]] && rm ~/.pryrc
 [[ -f ~/.config/jrnl/jrnl.yaml ]] && rm ~/.config/jrnl/jrnl.yaml
+[[ -f ~/Library/Application\ Support/com.mitchellh.ghostty/config ]] && rm ~/Library/Application\ Support/com.mitchellh.ghostty/config
 
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/bashrc ~/.bashrc
@@ -25,6 +26,7 @@ ln -s ~/.dotfiles/pdbrc ~/.pdbrc
 ln -s ~/.dotfiles/pdbrc.py ~/.pdbrc.py
 ln -s ~/.dotfiles/pryrc ~/.pryrc
 ln -s ~/.dotfiles/jrnl.yaml ~/.config/jrnl/jrnl.yaml
+ln -s ~/.dotfiles/ghostty_config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 mkdir -p ~/.ptpython && ln -s ~/.dotfiles/ptpython-config.py ~/.ptpython/config.py
 
 if [[ ! -d ~/.antigen ]]; then
