@@ -26,7 +26,7 @@ ln -s ~/.dotfiles/pdbrc ~/.pdbrc
 ln -s ~/.dotfiles/pdbrc.py ~/.pdbrc.py
 ln -s ~/.dotfiles/pryrc ~/.pryrc
 ln -s ~/.dotfiles/jrnl.yaml ~/.config/jrnl/jrnl.yaml
-ln -s ~/.dotfiles/ghostty_config ~/Library/Application\ Support/com.mitchellh.ghostty/config
+ln -s ~/.dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 mkdir -p ~/.ptpython && ln -s ~/.dotfiles/ptpython-config.py ~/.ptpython/config.py
 
 if [[ ! -d ~/.antigen ]]; then
