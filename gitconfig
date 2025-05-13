@@ -71,5 +71,5 @@
 [pager]
         difftool = true
 [core]
-    editor = zed --new  --wait
+    editor = subl --new-window  --wait
 	excludesfile = /Users/alex/.gitignore

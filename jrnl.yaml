@@ -5,14 +5,14 @@ colors:
   title: none
 default_hour: 9
 default_minute: 0
-editor: zed --new --wait
+editor: subl --new-window --wait
 encrypt: false
 highlight: true
-indent_character: "|"
+indent_character: '|'
 journals:
   default: ~/.daily.txt
 linewrap: false
-tagsymbols: "#"
+tagsymbols: '#'
 template: false
-timeformat: "%Y-%m-%d %H:%M"
-version: v4.2
+timeformat: '%Y-%m-%d %H:%M'
+version: v4.2.1

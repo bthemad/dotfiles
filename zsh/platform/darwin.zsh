@@ -42,12 +42,11 @@ alias z="/usr/local/bin/zed"
 # Alias for journaling app
 alias jj="jrnl \#log"
 alias jjc="echo "" > ~/.daily.txt"
-alias jje="jrnl \#log --export text > ~/.jj.md && zed --new --wait ~/.jj.md && dayone2 new -d 'Yesterday at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
-alias jjt="jrnl \#log --export text > ~/.jj.md && zed --new --wait ~/.jj.md && dayone2 new -d 'Today at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
+alias jje="jrnl \#log --export text > ~/.jj.md && subl --new-window --wait ~/.jj.md && dayone2 new -d 'Yesterday at 23:23' < ~/.jj.md && echo "" > ~/.daily.txt"
 
 # Environment
 export LANG=en_US.UTF-8
-export EDITOR='zed'
+export EDITOR='subl'
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
 # VirtualEnv specific
