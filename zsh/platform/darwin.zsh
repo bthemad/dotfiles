@@ -49,13 +49,6 @@ export LANG=en_US.UTF-8
 export EDITOR='subl'
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
-# VirtualEnv specific
-export VIRTUALENVWRAPPER_PYTHON=$(brew --prefix)/opt/python@3.10/libexec/bin/python
-export WORKON_HOME=$HOME/.virtualenvs
-if [ -f $(brew --prefix)/bin/virtualenvwrapper.sh ]; then
-    source $(brew --prefix)/bin/virtualenvwrapper.sh
-fi
-
 PYTHONWARNINGS=ignore
 
 # pip specific

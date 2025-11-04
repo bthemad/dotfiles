@@ -11,7 +11,7 @@ if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
     autoload -Uz compinit
-    compinit
+    compinit -u
 fi
 
 # Let's plug in our very custom completions
